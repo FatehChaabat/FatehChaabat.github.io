@@ -55,7 +55,7 @@
     .apropos-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
     .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; text-align: center; transition: border-color 0.3s; }
     .stat-card:hover { border-color: var(--accent1); }
-    .stat-num { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--accent1); }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 700; color: var(--accent1); }
     .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem; }
 
     #competences { background: var(--bg); }
@@ -149,8 +149,7 @@
   <ul class="nav-links">
     <li><a href="#apropos">À propos</a></li>
     <li><a href="#competences">Compétences</a></li>
-    <li><a href="#projets">Projets</a></li>
-    <li><a href="#experiences">Expériences</a></li>
+    <li><a href="#experiences">Expériences & Réalisations</a></li>
     <li><a href="#formation">Formation</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -165,7 +164,7 @@
     <div class="hero-title">Ingénieur Mécanique des Fluides & Analyse de Données</div>
     <p class="hero-desc">Ingénieur en mécanique des fluides et énergétique, avec expérience en modélisation et simulation CFD, analyse d'écoulements, systèmes de ventilation et phénomènes thermiques/incendie. J'exploite les données et le calcul scientifique pour optimiser les systèmes énergétiques et industriels.</p>
     <div class="hero-cta">
-      <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+      <a href="#experiences" class="btn btn-primary">Voir mes réalisations</a>
       <a href="#contact" class="btn btn-outline">Me contacter</a>
     </div>
   </div>
@@ -178,16 +177,16 @@
   </div>
   <div class="apropos-grid reveal">
     <div class="apropos-text">
-      <p>Docteur en mécanique des fluides et énergétique (École Centrale de Lyon), je combine une solide expertise en simulation CFD avec des compétences en analyse de données et programmation scientifique.</p>
-      <p>Mon parcours m'a permis d'intervenir sur des projets exigeants dans les domaines de l'énergie, du nucléaire, de la ventilation et de la thermique incendie — notamment sur le contrôle des fumées dans les tunnels ventilés.</p>
-      <p>Aujourd'hui, j'exploite Python, SQL et les méthodes de Machine Learning pour extraire de la valeur des données énergétiques et industrielles.</p>
+      <p>Ingénieur-docteur en mécanique des fluides et énergétique (École Centrale de Lyon), je combine une expertise avancée en simulation CFD avec des compétences en analyse de données et en programmation scientifique.</p>
+      <p>Mon parcours me permet d’intervenir sur des problématiques complexes dans les domaines de l’énergie, du nucléaire, de la ventilation et de la thermique incendie, notamment sur le contrôle des fumées en tunnels ventilés.</p>
+      <p>Aujourd’hui, j’exploite Python, SQL et des méthodes de machine learning pour valoriser des données issues de systèmes énergétiques et industriels.</p>
       <p>📍 Lyon, France</p>
     </div>
     <div class="apropos-stats">
-      <div class="stat-card"><div class="stat-num">PhD</div><div class="stat-label">Doctorat ECL</div></div>
-      <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Années d'expérience</div></div>
-      <div class="stat-card"><div class="stat-num">CFD</div><div class="stat-label">Simulation numérique</div></div>
-      <div class="stat-card"><div class="stat-num">Data</div><div class="stat-label">Analyse & ML</div></div>
+      <div class="stat-card"><div class="stat-num">Ingénieur-Docteur</div><div class="stat-label">École Centrale de Lyon</div></div>
+      <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label">Années d'expérience</div></div>
+      <div class="stat-card"><div class="stat-num">CFD</div><div class="stat-label">Simulation & modélisation numérique</div></div>
+      <div class="stat-card"><div class="stat-num">Data</div><div class="stat-label">Analyse & optimisation</div></div>
     </div>
   </div>
 </section>
@@ -246,54 +245,35 @@
   </div>
 </section>
 
-<section id="projets">
+<section id="experiences">
   <div class="reveal">
-    <div class="section-label">Projets</div>
-    <h2 class="section-title">Mes <span>réalisations</span></h2>
+    <div class="section-label">Expériences & Réalisations</div>
+    <h2 class="section-title">Parcours <span>professionnel</span></h2>
   </div>
-  <div class="projects-grid reveal">
+  <div class="timeline reveal">
 
-    <div class="project-card">
-      <div class="project-num">01</div>
-      <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">SQL</span><span class="project-tag">ML</span><span class="project-tag">DSM</span></div>
-      <div class="project-title">Analyse et gestion de la consommation énergétique</div>
-      <p class="project-desc">Pipeline complet d'analyse de données énergétiques sur 30 jours pour 2 compteurs simulés.</p>
-      <ul class="project-bullets">
+    <!-- PROJET DATA -->
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2026 | Projet personnel</div>
+      <div class="timeline-title">Analyse et gestion de la consommation énergétique</div>
+      <div class="timeline-company">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">SQL</span>
+        <span class="project-tag">ML</span>
+        <span class="project-tag">DSM</span>
+      </div>
+      <ul class="timeline-bullets" style="margin-top:0.6rem;">
         <li>Génération et analyse statistique en SQL (CV, facteur de pointe, Z-score)</li>
         <li>Détection d'anomalies : Z-score, Z-robuste, IIE, Isolation Forest</li>
         <li>Analyse de l'inertie thermique par corrélation puissance–température</li>
         <li>Modélisation prédictive : régression linéaire et Random Forest</li>
         <li>Optimisation DSM : clipping, load shifting, load reduction</li>
       </ul>
-      <div class="project-links"><a href="https://github.com/FatehChaabat/energy-demand-analytics" target="_blank" class="project-link">→ GitHub</a></div>
+      <div style="margin-top:0.8rem;"><a href="https://github.com/FatehChaabat/energy-demand-analytics" target="_blank" class="project-link">→ GitHub</a></div>
     </div>
 
-    <div class="project-card">
-      <div class="project-num">02</div>
-      <div class="project-tags"><span class="project-tag">CFD</span><span class="project-tag">OpenFOAM</span><span class="project-tag">SolidWorks</span><span class="project-tag">LabVIEW</span><span class="project-tag">Matlab</span></div>
-      <div class="project-title">Simulation thermique – Mélangeur chaotique (MLLM)</div>
-      <p class="project-desc">Étude numérique et expérimentale de l'efficacité thermique d'un mélangeur chaotique Multi-Level Laminating Mixer en régime laminaire, dans le but d'optimiser les échangeurs thermiques.</p>
-      <ul class="project-bullets">
-        <li>Mise en place du dispositif expérimental : mélangeur dans canal d'eau froide, eau chaude comme fluide circulant</li>
-        <li>Mesure de température et acquisition de données avec LabVIEW</li>
-        <li>Reconstruction 3D sous SolidWorks et simulations numériques sous OpenFOAM</li>
-        <li>Comparaison résultats expérimentaux, numériques et littérature</li>
-        <li>Résultat : le MLLM évacue très efficacement la chaleur et surpasse un échangeur classique en régime laminaire</li>
-        <li>Recommandations pour applications biologiques et pharmaceutiques à flux contrôlé</li>
-      </ul>
-      <div class="project-links"><a href="#" class="project-link soon">→ Bientôt disponible</a></div>
-    </div>
-
-  </div>
-</section>
-
-<section id="experiences">
-  <div class="reveal">
-    <div class="section-label">Expériences</div>
-    <h2 class="section-title">Parcours <span>professionnel</span></h2>
-  </div>
-  <div class="timeline reveal">
-
+    <!-- FREELANCE -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2021 – 2025</div>
@@ -306,6 +286,7 @@
       </ul>
     </div>
 
+    <!-- DOCTORAT -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2016 – 2020</div>
@@ -317,24 +298,36 @@
         <li>Conception et dimensionnement de réseaux de ventilation longitudinale et transversale</li>
         <li>Étude de l'impact de la forme et position des trappes sur l'efficacité de la ventilation</li>
         <li>Proposition de solutions innovantes (barrières solides) pour améliorer la sécurité incendie</li>
+        <li>Publication de 2 articles dans "Building and Environment" et présentation dans 2 conférences internationales</li>
       </ul>
     </div>
 
+    <!-- STAGE MÉLANGEUR -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">Avr. – Oct. 2016</div>
-      <div class="timeline-title">Stage Ingénieur R&D – Analyse thermique d'un mélangeur chaotique</div>
-      <div class="timeline-company">École Centrale de Lyon</div>
-      <ul class="timeline-bullets">
-        <li>Étude expérimentale des performances thermiques d'un mélangeur chaotique (MLLM)</li>
-        <li>Reconstruction 3D sous SolidWorks et analyse numérique sous OpenFOAM</li>
+      <div class="timeline-date">Mars – Oct. 2016 | Stage Ingénieur R&D</div>
+      <div class="timeline-title">Simulation thermique – Mélangeur chaotique (MLLM)</div>
+      <div class="timeline-company">École Centrale de Lyon
+        <span style="margin-left:0.5rem;">
+          <span class="project-tag">CFD</span>
+          <span class="project-tag">OpenFOAM</span>
+          <span class="project-tag">SolidWorks</span>
+          <span class="project-tag">LabVIEW</span>
+        </span>
+      </div>
+      <ul class="timeline-bullets" style="margin-top:0.6rem;">
+        <li>Dispositif expérimental : mélangeur en canal d'eau froide, acquisition de données avec LabVIEW</li>
+        <li>Reconstruction 3D sous SolidWorks et simulations numériques sous OpenFOAM</li>
+        <li>Résultat : le MLLM surpasse un échangeur classique en régime laminaire</li>
+        <li>Recommandations pour applications biologiques et pharmaceutiques à flux contrôlé</li>
       </ul>
     </div>
 
+    <!-- STAGE ENP -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">Fév. – Août 2015</div>
-      <div class="timeline-title">Stage Ingénieur – Performances aérauliques de ventilateurs centrifuges</div>
+      <div class="timeline-date">Fév. – Août 2015 | Stage Ingénieur</div>
+      <div class="timeline-title">Performances aérauliques de ventilateurs centrifuges</div>
       <div class="timeline-company">ENP Alger</div>
       <ul class="timeline-bullets">
         <li>Conception, mise en place et étalonnage d'un banc d'essai aéraulique complet</li>
@@ -381,7 +374,7 @@
     <p>Intéressé par un projet ou une collaboration ? N'hésitez pas à me contacter.</p>
     <div class="contact-links">
       <a href="/cdn-cgi/l/email-protection#e4828590818cca878c8585868590a48389858d88ca878b89" class="contact-link">✉️ Email</a>
-      <a href="https://www.linkedin.com/in/fateh-chaabat" target="_blank" class="contact-link">💼 LinkedIn</a>
+      <a href="https://www.linkedin.com/in/fateh-chaabat-08202aa9/" target="_blank" class="contact-link">💼 LinkedIn</a>
       <a href="https://github.com/FatehChaabat" target="_blank" class="contact-link">🐙 GitHub</a>
       <a href="https://www.researchgate.net/profile/Fateh-Chaabat" target="_blank" class="contact-link">🔬 ResearchGate</a>
     </div>
