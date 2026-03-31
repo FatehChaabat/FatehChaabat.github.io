@@ -55,7 +55,7 @@
     .apropos-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
     .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; text-align: center; transition: border-color 0.3s; }
     .stat-card:hover { border-color: var(--accent1); }
-    .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 700; color: var(--accent1); }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--accent1); }
     .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem; }
 
     #competences { background: var(--bg); }
@@ -178,16 +178,16 @@
   </div>
   <div class="apropos-grid reveal">
     <div class="apropos-text">
-      <p>Ingénieur-docteur en mécanique des fluides et énergétique (École Centrale de Lyon), je combine une expertise avancée en simulation CFD avec des compétences en analyse de données et en programmation scientifique.</p>
-      <p>Mon parcours me permet d’intervenir sur des problématiques complexes dans les domaines de l’énergie, du nucléaire, de la ventilation et de la thermique incendie, notamment sur le contrôle des fumées en tunnels ventilés.</p>
-      <p>Aujourd’hui, j’exploite Python, SQL et des méthodes de machine learning pour valoriser des données issues de systèmes énergétiques et industriels.</p>
+      <p>Docteur en mécanique des fluides et énergétique (École Centrale de Lyon), je combine une solide expertise en simulation CFD avec des compétences en analyse de données et programmation scientifique.</p>
+      <p>Mon parcours m'a permis d'intervenir sur des projets exigeants dans les domaines de l'énergie, du nucléaire, de la ventilation et de la thermique incendie — notamment sur le contrôle des fumées dans les tunnels ventilés.</p>
+      <p>Aujourd'hui, j'exploite Python, SQL et les méthodes de Machine Learning pour extraire de la valeur des données énergétiques et industrielles.</p>
       <p>📍 Lyon, France</p>
     </div>
     <div class="apropos-stats">
-      <div class="stat-card"><div class="stat-num">Ingénieur-Docteur</div><div class="stat-label">ENP Alger & École Centrale de Lyon</div></div>
-      <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label">Années d'expérience</div></div>
-      <div class="stat-card"><div class="stat-num">CFD</div><div class="stat-label">Simulation & modélisation numérique</div></div>
-      <div class="stat-card"><div class="stat-num">Data</div><div class="stat-label">Analyse & optimisation</div></div>
+      <div class="stat-card"><div class="stat-num">PhD</div><div class="stat-label">Doctorat ECL</div></div>
+      <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Années d'expérience</div></div>
+      <div class="stat-card"><div class="stat-num">CFD</div><div class="stat-label">Simulation numérique</div></div>
+      <div class="stat-card"><div class="stat-num">Data</div><div class="stat-label">Analyse & ML</div></div>
     </div>
   </div>
 </section>
@@ -268,28 +268,18 @@
       <div class="project-links"><a href="https://github.com/FatehChaabat/energy-demand-analytics" target="_blank" class="project-link">→ GitHub</a></div>
     </div>
 
-    <!--
-      <div class="project-card">
-      <div class="project-num">03</div>
-      <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">OpenCV</span><span class="project-tag">LBPH</span></div>
-      <div class="project-title">Reconnaissance faciale – Contrôle d'accès cantine</div>
-      <p class="project-desc">Système de reconnaissance faciale en temps réel pour éviter les doublons de passage.</p>
-      <ul class="project-bullets">
-        <li>Reconnaissance par algorithme LBPH en temps réel via webcam</li>
-        <li>Gestion des sessions avec réinitialisation quotidienne automatique</li>
-      </ul>
-      <div class="project-links"><a href="#" class="project-link soon">→ Bientôt disponible</a></div>
-    </div>
-      -->
-
     <div class="project-card">
       <div class="project-num">02</div>
-      <div class="project-tags"><span class="project-tag">CFD</span><span class="project-tag">OpenFOAM</span><span class="project-tag">SolidWorks</span></div>
-      <div class="project-title">Simulation thermique – Mélangeur chaotique</div>
-      <p class="project-desc">Étude thermique d'un mélangeur chaotique (MLLM) en régime laminaire.</p>
+      <div class="project-tags"><span class="project-tag">CFD</span><span class="project-tag">OpenFOAM</span><span class="project-tag">SolidWorks</span><span class="project-tag">LabVIEW</span><span class="project-tag">Matlab</span></div>
+      <div class="project-title">Simulation thermique – Mélangeur chaotique (MLLM)</div>
+      <p class="project-desc">Étude numérique et expérimentale de l'efficacité thermique d'un mélangeur chaotique Multi-Level Laminating Mixer en régime laminaire, dans le but d'optimiser les échangeurs thermiques.</p>
       <ul class="project-bullets">
-        <li>Reconstruction 3D sous SolidWorks et analyse numérique sous OpenFOAM</li>
-        <li>Recommandations pour applications biologiques et pharmaceutiques</li>
+        <li>Mise en place du dispositif expérimental : mélangeur dans canal d'eau froide, eau chaude comme fluide circulant</li>
+        <li>Mesure de température et acquisition de données avec LabVIEW</li>
+        <li>Reconstruction 3D sous SolidWorks et simulations numériques sous OpenFOAM</li>
+        <li>Comparaison résultats expérimentaux, numériques et littérature</li>
+        <li>Résultat : le MLLM évacue très efficacement la chaleur et surpasse un échangeur classique en régime laminaire</li>
+        <li>Recommandations pour applications biologiques et pharmaceutiques à flux contrôlé</li>
       </ul>
       <div class="project-links"><a href="#" class="project-link soon">→ Bientôt disponible</a></div>
     </div>
@@ -390,8 +380,8 @@
   <div class="contact-box reveal">
     <p>Intéressé par un projet ou une collaboration ? N'hésitez pas à me contacter.</p>
     <div class="contact-links">
-      <a href="mailto:fateh.chaabat@gmail.com" class="contact-link">✉️ Email</a>
-      <a href="https://www.linkedin.com/in/fateh-chaabat-08202aa9/" target="_blank" class="contact-link">💼 LinkedIn</a>
+      <a href="/cdn-cgi/l/email-protection#e4828590818cca878c8585868590a48389858d88ca878b89" class="contact-link">✉️ Email</a>
+      <a href="https://www.linkedin.com/in/fateh-chaabat" target="_blank" class="contact-link">💼 LinkedIn</a>
       <a href="https://github.com/FatehChaabat" target="_blank" class="contact-link">🐙 GitHub</a>
       <a href="https://www.researchgate.net/profile/Fateh-Chaabat" target="_blank" class="contact-link">🔬 ResearchGate</a>
     </div>
@@ -402,13 +392,7 @@
   <p>© 2026 Fateh Chaabat – Lyon, France</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  reveals.forEach(r => observer.observe(r));
-</script>
-
-</body>
-</html>
+    entries.forEach(e => { if (e
