@@ -19,313 +19,122 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.2rem 4rem;
-      background: rgba(10,15,30,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800; font-size: 1.2rem;
-      color: var(--accent1); letter-spacing: 0.05em;
-    }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-    .nav-links a {
-      color: var(--muted); text-decoration: none;
-      font-size: 0.9rem; letter-spacing: 0.05em;
-      transition: color 0.3s;
-    }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: rgba(10,15,30,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--accent1); letter-spacing: 0.05em; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.3s; }
     .nav-links a:hover { color: var(--accent1); }
 
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 8rem 4rem 4rem;
-      position: relative; overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: 0; z-index: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,201,255,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 20% 80%, rgba(249,115,22,0.07) 0%, transparent 50%),
-        radial-gradient(ellipse 50% 50% at 80% 10%, rgba(167,139,250,0.06) 0%, transparent 50%);
-    }
-    .hero-grid {
-      position: absolute; inset: 0; z-index: 0;
-      background-image:
-        linear-gradient(rgba(0,201,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,201,255,0.04) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
+    #hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,201,255,0.08) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 20% 80%, rgba(249,115,22,0.07) 0%, transparent 50%), radial-gradient(ellipse 50% 50% at 80% 10%, rgba(167,139,250,0.06) 0%, transparent 50%); }
+    .hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(0,201,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,201,255,0.04) 1px, transparent 1px); background-size: 60px 60px; }
     .hero-content { position: relative; z-index: 1; max-width: 750px; }
-    .hero-tag {
-      display: inline-block;
-      background: rgba(0,201,255,0.1);
-      border: 1px solid rgba(0,201,255,0.3);
-      color: var(--accent1);
-      padding: 0.3rem 1rem; border-radius: 2rem;
-      font-size: 0.8rem; letter-spacing: 0.12em;
-      text-transform: uppercase; margin-bottom: 1.5rem;
-      animation: fadeUp 0.8s ease both;
-    }
-    .hero-name {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      font-weight: 800; line-height: 1.05;
-      margin-bottom: 0.5rem;
-      animation: fadeUp 0.8s 0.1s ease both;
-    }
+    .hero-tag { display: inline-block; background: rgba(0,201,255,0.1); border: 1px solid rgba(0,201,255,0.3); color: var(--accent1); padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.5rem; animation: fadeUp 0.8s ease both; }
+    .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 800; line-height: 1.05; margin-bottom: 0.5rem; animation: fadeUp 0.8s 0.1s ease both; }
     .hero-name span { color: var(--accent1); }
-    .hero-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(1rem, 2vw, 1.4rem);
-      font-weight: 600; color: var(--accent2);
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.8s 0.2s ease both;
-    }
-    .hero-desc {
-      color: var(--muted); max-width: 580px;
-      font-size: 1rem; line-height: 1.8;
-      animation: fadeUp 0.8s 0.3s ease both;
-    }
-    .hero-cta {
-      display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;
-      animation: fadeUp 0.8s 0.4s ease both;
-    }
-    .btn {
-      padding: 0.8rem 2rem; border-radius: 0.5rem;
-      font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
-      font-weight: 500; text-decoration: none; cursor: pointer;
-      transition: all 0.3s; display: inline-block;
-    }
-    .btn-primary {
-      background: var(--accent1); color: var(--bg);
-    }
+    .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(1rem, 2vw, 1.4rem); font-weight: 600; color: var(--accent2); margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.2s ease both; }
+    .hero-desc { color: var(--muted); max-width: 580px; font-size: 1rem; line-height: 1.8; animation: fadeUp 0.8s 0.3s ease both; }
+    .hero-cta { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; animation: fadeUp 0.8s 0.4s ease both; }
+    .btn { padding: 0.8rem 2rem; border-radius: 0.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; text-decoration: none; cursor: pointer; transition: all 0.3s; display: inline-block; }
+    .btn-primary { background: var(--accent1); color: var(--bg); }
     .btn-primary:hover { background: #33d4ff; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,201,255,0.3); }
-    .btn-outline {
-      border: 1px solid var(--border); color: var(--text);
-      background: transparent;
-    }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); background: transparent; }
     .btn-outline:hover { border-color: var(--accent1); color: var(--accent1); transform: translateY(-2px); }
 
-    /* ── SECTIONS ── */
     section { padding: 6rem 4rem; }
-    .section-label {
-      font-size: 0.75rem; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--accent1);
-      margin-bottom: 0.5rem; font-weight: 500;
-    }
-    .section-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800; margin-bottom: 3rem;
-      line-height: 1.1;
-    }
+    .section-label { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent1); margin-bottom: 0.5rem; font-weight: 500; }
+    .section-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 3rem; line-height: 1.1; }
     .section-title span { color: var(--accent2); }
 
-    /* ── À PROPOS ── */
     #apropos { background: var(--surface); }
-    .apropos-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-    }
+    .apropos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     .apropos-text p { color: var(--muted); margin-bottom: 1rem; font-size: 1.05rem; }
-    .apropos-stats {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
-    }
-    .stat-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 1rem; padding: 1.5rem; text-align: center;
-      transition: border-color 0.3s;
-    }
+    .apropos-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; text-align: center; transition: border-color 0.3s; }
     .stat-card:hover { border-color: var(--accent1); }
-    .stat-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 2.5rem; font-weight: 800; color: var(--accent1);
-    }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--accent1); }
     .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem; }
 
-    /* ── COMPÉTENCES ── */
     #competences { background: var(--bg); }
-    .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;
-    }
-    .skill-group {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 1rem; padding: 1.8rem;
-      transition: border-color 0.3s, transform 0.3s;
-    }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .skill-group { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.8rem; transition: border-color 0.3s, transform 0.3s; }
     .skill-group:hover { border-color: var(--accent1); transform: translateY(-4px); }
-    .skill-group-title {
-      font-family: 'Syne', sans-serif; font-weight: 700;
-      font-size: 1rem; margin-bottom: 1rem;
-      display: flex; align-items: center; gap: 0.6rem;
-    }
-    .skill-icon { font-size: 1.3rem; }
+    .skill-group-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem; }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .skill-tag {
-      background: rgba(0,201,255,0.08);
-      border: 1px solid rgba(0,201,255,0.2);
-      color: var(--accent1); padding: 0.25rem 0.75rem;
-      border-radius: 2rem; font-size: 0.8rem;
-    }
-    .skill-tag.orange {
-      background: rgba(249,115,22,0.08);
-      border-color: rgba(249,115,22,0.2);
-      color: var(--accent2);
-    }
-    .skill-tag.purple {
-      background: rgba(167,139,250,0.08);
-      border-color: rgba(167,139,250,0.2);
-      color: var(--accent3);
-    }
+    .skill-tag { background: rgba(0,201,255,0.08); border: 1px solid rgba(0,201,255,0.2); color: var(--accent1); padding: 0.25rem 0.75rem; border-radius: 2rem; font-size: 0.8rem; }
+    .skill-tag.orange { background: rgba(249,115,22,0.08); border-color: rgba(249,115,22,0.2); color: var(--accent2); }
+    .skill-tag.purple { background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.2); color: var(--accent3); }
 
-    /* ── PROJETS ── */
+    .soft-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .soft-card { background: var(--card); border: 1px solid var(--border); border-radius: 0.8rem; padding: 1rem 1.2rem; display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--muted); transition: border-color 0.3s; }
+    .soft-card:hover { border-color: var(--accent3); color: var(--text); }
+
+    .langues-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+    .langue-card { background: var(--card); border: 1px solid var(--border); border-radius: 0.8rem; padding: 0.8rem 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; min-width: 130px; transition: border-color 0.3s; }
+    .langue-card:hover { border-color: var(--accent2); }
+    .langue-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; }
+    .langue-level { font-size: 0.75rem; color: var(--muted); }
+
     #projets { background: var(--surface); }
-    .projects-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem;
-    }
-    .project-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 1.2rem; padding: 2rem; position: relative; overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .project-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--accent1), var(--accent3));
-    }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+    .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 1.2rem; padding: 2rem; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
+    .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent1), var(--accent3)); }
     .project-card:hover { border-color: rgba(0,201,255,0.3); transform: translateY(-5px); }
-    .project-num {
-      font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800;
-      color: rgba(0,201,255,0.08); position: absolute; top: 1rem; right: 1.5rem;
-    }
+    .project-num { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: rgba(0,201,255,0.08); position: absolute; top: 1rem; right: 1.5rem; }
     .project-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
-    .project-tag {
-      background: rgba(0,201,255,0.1); color: var(--accent1);
-      padding: 0.2rem 0.6rem; border-radius: 0.3rem; font-size: 0.75rem;
-    }
-    .project-title {
-      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem;
-      margin-bottom: 0.8rem; line-height: 1.3;
-    }
-    .project-desc { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .project-tag { background: rgba(0,201,255,0.1); color: var(--accent1); padding: 0.2rem 0.6rem; border-radius: 0.3rem; font-size: 0.75rem; }
+    .project-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 0.8rem; line-height: 1.3; }
+    .project-desc { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+    .project-bullets { list-style: none; margin-bottom: 1.5rem; }
+    .project-bullets li { color: var(--muted); font-size: 0.85rem; padding: 0.2rem 0 0.2rem 1rem; position: relative; }
+    .project-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent1); }
     .project-links { display: flex; gap: 1rem; }
-    .project-link {
-      color: var(--accent1); text-decoration: none; font-size: 0.85rem;
-      font-weight: 500; display: flex; align-items: center; gap: 0.3rem;
-      transition: opacity 0.3s;
-    }
+    .project-link { color: var(--accent1); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: opacity 0.3s; }
     .project-link:hover { opacity: 0.7; }
     .project-link.soon { color: var(--muted); cursor: default; }
 
-    /* ── EXPÉRIENCES ── */
     #experiences { background: var(--bg); }
     .timeline { position: relative; padding-left: 2rem; }
-    .timeline::before {
-      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-      width: 2px; background: linear-gradient(to bottom, var(--accent1), var(--accent3), transparent);
-    }
-    .timeline-item {
-      position: relative; margin-bottom: 2.5rem; padding-left: 2rem;
-    }
-    .timeline-dot {
-      position: absolute; left: -2.45rem; top: 0.4rem;
-      width: 12px; height: 12px; border-radius: 50%;
-      background: var(--accent1); border: 2px solid var(--bg);
-    }
-    .timeline-date {
-      font-size: 0.8rem; color: var(--accent2); font-weight: 500;
-      letter-spacing: 0.05em; margin-bottom: 0.3rem;
-    }
-    .timeline-title {
-      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem;
-      margin-bottom: 0.2rem;
-    }
-    .timeline-company { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
-    .timeline-desc { color: var(--muted); font-size: 0.9rem; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent1), var(--accent3), transparent); }
+    .timeline-item { position: relative; margin-bottom: 3rem; padding-left: 2rem; }
+    .timeline-dot { position: absolute; left: -2.45rem; top: 0.4rem; width: 12px; height: 12px; border-radius: 50%; background: var(--accent1); border: 2px solid var(--bg); }
+    .timeline-date { font-size: 0.8rem; color: var(--accent2); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .timeline-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem; }
+    .timeline-company { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.8rem; }
+    .timeline-bullets { list-style: none; }
+    .timeline-bullets li { color: var(--muted); font-size: 0.88rem; padding: 0.2rem 0 0.2rem 1rem; position: relative; }
+    .timeline-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent1); font-size: 0.8rem; }
 
-    /* ── FORMATION ── */
     #formation { background: var(--surface); }
-    .formation-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;
-    }
-    .formation-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 1rem; padding: 1.8rem;
-      transition: border-color 0.3s;
-    }
+    .formation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .formation-card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.8rem; transition: border-color 0.3s; }
     .formation-card:hover { border-color: var(--accent3); }
-    .formation-year {
-      font-size: 0.8rem; color: var(--accent3); font-weight: 500;
-      letter-spacing: 0.05em; margin-bottom: 0.5rem;
-    }
-    .formation-degree {
-      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem;
-      margin-bottom: 0.3rem;
-    }
+    .formation-year { font-size: 0.8rem; color: var(--accent3); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .formation-degree { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; }
     .formation-school { color: var(--muted); font-size: 0.9rem; }
-    .formation-link {
-      display: inline-block; margin-top: 0.8rem;
-      color: var(--accent1); font-size: 0.8rem; text-decoration: none;
-    }
+    .formation-sub { color: var(--muted); font-size: 0.82rem; margin-top: 0.4rem; font-style: italic; }
+    .formation-link { display: inline-block; margin-top: 0.8rem; color: var(--accent1); font-size: 0.8rem; text-decoration: none; }
     .formation-link:hover { text-decoration: underline; }
 
-    /* ── CONTACT ── */
     #contact { background: var(--bg); text-align: center; }
-    .contact-box {
-      max-width: 600px; margin: 0 auto;
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 1.5rem; padding: 3rem;
-    }
+    .contact-box { max-width: 650px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 1.5rem; padding: 3rem; }
     .contact-box p { color: var(--muted); margin-bottom: 2rem; }
-    .contact-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-    .contact-link {
-      display: flex; align-items: center; gap: 0.5rem;
-      color: var(--text); text-decoration: none; font-size: 0.95rem;
-      padding: 0.7rem 1.5rem; border-radius: 0.5rem;
-      border: 1px solid var(--border); transition: all 0.3s;
-    }
+    .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .contact-link { display: flex; align-items: center; gap: 0.5rem; color: var(--text); text-decoration: none; font-size: 0.9rem; padding: 0.7rem 1.2rem; border-radius: 0.5rem; border: 1px solid var(--border); transition: all 0.3s; }
     .contact-link:hover { border-color: var(--accent1); color: var(--accent1); transform: translateY(-2px); }
 
-    /* ── FOOTER ── */
-    footer {
-      text-align: center; padding: 2rem;
-      color: var(--muted); font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-    }
+    footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
 
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .reveal {
-      opacity: 0; transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
-      .nav-links { gap: 1.2rem; }
+      .nav-links { gap: 1rem; }
       section { padding: 4rem 1.5rem; }
       #hero { padding: 7rem 1.5rem 3rem; }
       .apropos-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -335,7 +144,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">FC.</div>
   <ul class="nav-links">
@@ -348,7 +156,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -356,9 +163,7 @@
     <div class="hero-tag">Disponible pour de nouvelles opportunités</div>
     <h1 class="hero-name">Fateh<br><span>Chaabat</span></h1>
     <div class="hero-title">Ingénieur Mécanique des Fluides & Analyse de Données</div>
-    <p class="hero-desc">
-      Ingénieur en mécanique des fluides et énergétique, avec expérience en modélisation et simulation CFD, analyse d'écoulements, systèmes de ventilation et phénomènes thermiques. J'exploite les données et le calcul scientifique pour optimiser les systèmes énergétiques et industriels.
-    </p>
+    <p class="hero-desc">Ingénieur en mécanique des fluides et énergétique, avec expérience en modélisation et simulation CFD, analyse d'écoulements, systèmes de ventilation et phénomènes thermiques/incendie. J'exploite les données et le calcul scientifique pour optimiser les systèmes énergétiques et industriels.</p>
     <div class="hero-cta">
       <a href="#projets" class="btn btn-primary">Voir mes projets</a>
       <a href="#contact" class="btn btn-outline">Me contacter</a>
@@ -366,7 +171,6 @@
   </div>
 </section>
 
-<!-- À PROPOS -->
 <section id="apropos">
   <div class="reveal">
     <div class="section-label">À propos</div>
@@ -375,31 +179,19 @@
   <div class="apropos-grid reveal">
     <div class="apropos-text">
       <p>Docteur en mécanique des fluides et énergétique (École Centrale de Lyon), je combine une solide expertise en simulation CFD avec des compétences en analyse de données et programmation scientifique.</p>
-      <p>Mon parcours m'a permis d'intervenir sur des projets exigeants dans les domaines de l'énergie, du nucléaire, de la ventilation et de la thermique incendie.</p>
+      <p>Mon parcours m'a permis d'intervenir sur des projets exigeants dans les domaines de l'énergie, du nucléaire, de la ventilation et de la thermique incendie — notamment sur le contrôle des fumées dans les tunnels ventilés.</p>
       <p>Aujourd'hui, j'exploite Python, SQL et les méthodes de Machine Learning pour extraire de la valeur des données énergétiques et industrielles.</p>
+      <p>📍 Lyon, France</p>
     </div>
     <div class="apropos-stats">
-      <div class="stat-card">
-        <div class="stat-num">PhD</div>
-        <div class="stat-label">Doctorat ECL</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">5+</div>
-        <div class="stat-label">Années d'expérience</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">CFD</div>
-        <div class="stat-label">Simulation numérique</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">Data</div>
-        <div class="stat-label">Analyse & ML</div>
-      </div>
+      <div class="stat-card"><div class="stat-num">PhD</div><div class="stat-label">Doctorat ECL</div></div>
+      <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Années d'expérience</div></div>
+      <div class="stat-card"><div class="stat-num">CFD</div><div class="stat-label">Simulation numérique</div></div>
+      <div class="stat-card"><div class="stat-num">Data</div><div class="stat-label">Analyse & ML</div></div>
     </div>
   </div>
 </section>
 
-<!-- COMPÉTENCES -->
 <section id="competences">
   <div class="reveal">
     <div class="section-label">Compétences</div>
@@ -407,58 +199,53 @@
   </div>
   <div class="skills-grid reveal">
     <div class="skill-group">
-      <div class="skill-group-title"><span class="skill-icon">🌊</span> CFD / Simulation</div>
-      <div class="skill-tags">
-        <span class="skill-tag">FDS</span>
-        <span class="skill-tag">ANSYS Fluent</span>
-        <span class="skill-tag">OpenFOAM</span>
-      </div>
+      <div class="skill-group-title">🌊 CFD / Simulation</div>
+      <div class="skill-tags"><span class="skill-tag">FDS</span><span class="skill-tag">ANSYS Fluent</span><span class="skill-tag">OpenFOAM</span></div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title"><span class="skill-icon">📊</span> Analyse de données</div>
-      <div class="skill-tags">
-        <span class="skill-tag orange">Python</span>
-        <span class="skill-tag orange">NumPy</span>
-        <span class="skill-tag orange">Pandas</span>
-        <span class="skill-tag orange">Matplotlib</span>
-        <span class="skill-tag orange">Scikit-learn</span>
-        <span class="skill-tag orange">MATLAB</span>
-      </div>
+      <div class="skill-group-title">📊 Analyse de données</div>
+      <div class="skill-tags"><span class="skill-tag orange">Python</span><span class="skill-tag orange">NumPy</span><span class="skill-tag orange">Pandas</span><span class="skill-tag orange">Matplotlib</span><span class="skill-tag orange">Scikit-learn</span><span class="skill-tag orange">MATLAB</span></div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title"><span class="skill-icon">🗄️</span> Base de données</div>
-      <div class="skill-tags">
-        <span class="skill-tag orange">SQL</span>
-        <span class="skill-tag orange">SQL Server</span>
-        <span class="skill-tag orange">Excel avancé</span>
-      </div>
+      <div class="skill-group-title">🗄️ Base de données</div>
+      <div class="skill-tags"><span class="skill-tag orange">SQL</span><span class="skill-tag orange">SQL Server</span><span class="skill-tag orange">Excel avancé</span></div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title"><span class="skill-icon">🔧</span> Conception CAO</div>
-      <div class="skill-tags">
-        <span class="skill-tag purple">SolidWorks</span>
-        <span class="skill-tag purple">CATIA</span>
-      </div>
+      <div class="skill-group-title">🔧 Conception CAO</div>
+      <div class="skill-tags"><span class="skill-tag purple">SolidWorks</span><span class="skill-tag purple">CATIA</span></div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title"><span class="skill-icon">💻</span> Développement Web</div>
-      <div class="skill-tags">
-        <span class="skill-tag purple">HTML</span>
-        <span class="skill-tag purple">CSS</span>
-        <span class="skill-tag purple">JavaScript</span>
-      </div>
+      <div class="skill-group-title">💻 Développement Web</div>
+      <div class="skill-tags"><span class="skill-tag purple">HTML</span><span class="skill-tag purple">CSS</span><span class="skill-tag purple">JavaScript</span></div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title"><span class="skill-icon">🖥️</span> OS & Bureautique</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Linux</span>
-        <span class="skill-tag">Windows</span>
-      </div>
+      <div class="skill-group-title">🖥️ OS & Bureautique</div>
+      <div class="skill-tags"><span class="skill-tag">Linux</span><span class="skill-tag">Windows</span></div>
+    </div>
+  </div>
+
+  <div class="reveal" style="margin-top:3rem;">
+    <div class="section-label">Soft Skills</div>
+    <div class="soft-grid">
+      <div class="soft-card">🧠 Analyse et résolution de problèmes complexes</div>
+      <div class="soft-card">📁 Gestion de projets techniques</div>
+      <div class="soft-card">🔍 Autonomie dans la recherche et l'analyse</div>
+      <div class="soft-card">📢 Communication technique</div>
+      <div class="soft-card">🤝 Travail en équipe pluridisciplinaire</div>
+    </div>
+  </div>
+
+  <div class="reveal" style="margin-top:3rem;">
+    <div class="section-label">Langues</div>
+    <div class="langues-grid">
+      <div class="langue-card"><div class="langue-name">Français</div><div class="langue-level">Courant</div></div>
+      <div class="langue-card"><div class="langue-name">Anglais</div><div class="langue-level">Compétences techniques</div></div>
+      <div class="langue-card"><div class="langue-name">Arabe</div><div class="langue-level">Courant</div></div>
+      <div class="langue-card"><div class="langue-name">Kabyle</div><div class="langue-level">Langue maternelle</div></div>
     </div>
   </div>
 </section>
 
-<!-- PROJETS -->
 <section id="projets">
   <div class="reveal">
     <div class="section-label">Projets</div>
@@ -468,50 +255,46 @@
 
     <div class="project-card">
       <div class="project-num">01</div>
-      <div class="project-tags">
-        <span class="project-tag">Python</span>
-        <span class="project-tag">SQL</span>
-        <span class="project-tag">ML</span>
-      </div>
+      <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">SQL</span><span class="project-tag">ML</span><span class="project-tag">DSM</span></div>
       <div class="project-title">Analyse et gestion de la consommation énergétique</div>
-      <p class="project-desc">Pipeline complet d'analyse de données énergétiques sur 30 jours : détection d'anomalies, corrélation puissance–température, modélisation prédictive (régression linéaire, Random Forest) et optimisation DSM.</p>
-      <div class="project-links">
-        <a href="https://github.com/FatehChaabat/energy-demand-analytics" target="_blank" class="project-link">→ GitHub</a>
-      </div>
+      <p class="project-desc">Pipeline complet d'analyse de données énergétiques sur 30 jours pour 2 compteurs simulés.</p>
+      <ul class="project-bullets">
+        <li>Génération et analyse statistique en SQL (CV, facteur de pointe, Z-score)</li>
+        <li>Détection d'anomalies : Z-score, Z-robuste, IIE, Isolation Forest</li>
+        <li>Analyse de l'inertie thermique par corrélation puissance–température</li>
+        <li>Modélisation prédictive : régression linéaire et Random Forest</li>
+        <li>Optimisation DSM : clipping, load shifting, load reduction</li>
+      </ul>
+      <div class="project-links"><a href="https://github.com/FatehChaabat/energy-demand-analytics" target="_blank" class="project-link">→ GitHub</a></div>
     </div>
 
     <div class="project-card">
       <div class="project-num">02</div>
-      <div class="project-tags">
-        <span class="project-tag">Python</span>
-        <span class="project-tag">OpenCV</span>
-        <span class="project-tag">ML</span>
-      </div>
+      <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">OpenCV</span><span class="project-tag">LBPH</span></div>
       <div class="project-title">Reconnaissance faciale – Contrôle d'accès cantine</div>
-      <p class="project-desc">Système de reconnaissance faciale en temps réel basé sur LBPH pour contrôler l'accès à la cantine et éviter les doublons de passage.</p>
-      <div class="project-links">
-        <a href="#" class="project-link soon">→ Bientôt disponible</a>
-      </div>
+      <p class="project-desc">Système de reconnaissance faciale en temps réel pour éviter les doublons de passage.</p>
+      <ul class="project-bullets">
+        <li>Reconnaissance par algorithme LBPH en temps réel via webcam</li>
+        <li>Gestion des sessions avec réinitialisation quotidienne automatique</li>
+      </ul>
+      <div class="project-links"><a href="#" class="project-link soon">→ Bientôt disponible</a></div>
     </div>
 
     <div class="project-card">
       <div class="project-num">03</div>
-      <div class="project-tags">
-        <span class="project-tag">CFD</span>
-        <span class="project-tag">FDS</span>
-        <span class="project-tag">Thermique</span>
-      </div>
+      <div class="project-tags"><span class="project-tag">CFD</span><span class="project-tag">OpenFOAM</span><span class="project-tag">SolidWorks</span></div>
       <div class="project-title">Simulation thermique – Mélangeur chaotique</div>
-      <p class="project-desc">Étude thermique d'un mélangeur chaotique par simulation numérique. Analyse des phénomènes de transfert de chaleur et d'optimisation du mélange.</p>
-      <div class="project-links">
-        <a href="#" class="project-link soon">→ Bientôt disponible</a>
-      </div>
+      <p class="project-desc">Étude thermique d'un mélangeur chaotique (MLLM) en régime laminaire.</p>
+      <ul class="project-bullets">
+        <li>Reconstruction 3D sous SolidWorks et analyse numérique sous OpenFOAM</li>
+        <li>Recommandations pour applications biologiques et pharmaceutiques</li>
+      </ul>
+      <div class="project-links"><a href="#" class="project-link soon">→ Bientôt disponible</a></div>
     </div>
 
   </div>
 </section>
 
-<!-- EXPÉRIENCES -->
 <section id="experiences">
   <div class="reveal">
     <div class="section-label">Expériences</div>
@@ -521,24 +304,39 @@
 
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2020 – 2025</div>
-      <div class="timeline-title">Technicien indépendant</div>
-      <div class="timeline-company">Déploiement réseaux fibre optique et infrastructures informatiques – Lyon</div>
+      <div class="timeline-date">2021 – 2025</div>
+      <div class="timeline-title">Freelance – Déploiement fibre optique et intégration réseaux informatiques</div>
+      <div class="timeline-company">Lyon</div>
+      <ul class="timeline-bullets">
+        <li>Installation de réseaux fibre optique et dépannage informatique</li>
+        <li>Formation, coordination et supervision de techniciens</li>
+        <li>Coordination de chantiers et relation client</li>
+      </ul>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2016 – 2020</div>
-      <div class="timeline-title">Doctorant – Mécanique des fluides et Énergétique</div>
+      <div class="timeline-title">Doctorat – Mécanique des fluides et Énergétique</div>
       <div class="timeline-company">École Centrale de Lyon</div>
-      <div class="timeline-desc">Recherche en simulation numérique et phénomènes thermiques.</div>
+      <ul class="timeline-bullets">
+        <li>Étude expérimentale et numérique sur le contrôle des fumées d'incendie dans les tunnels ventilés</li>
+        <li>Analyse et traitement des données issues de simulations et d'expérimentations</li>
+        <li>Conception et dimensionnement de réseaux de ventilation longitudinale et transversale</li>
+        <li>Étude de l'impact de la forme et position des trappes sur l'efficacité de la ventilation</li>
+        <li>Proposition de solutions innovantes (barrières solides) pour améliorer la sécurité incendie</li>
+      </ul>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">Avr. – Oct. 2016</div>
-      <div class="timeline-title">Stage R&D – Étude thermique d'un mélangeur chaotique</div>
+      <div class="timeline-title">Stage Ingénieur R&D – Analyse thermique d'un mélangeur chaotique</div>
       <div class="timeline-company">École Centrale de Lyon</div>
+      <ul class="timeline-bullets">
+        <li>Étude expérimentale des performances thermiques d'un mélangeur chaotique (MLLM)</li>
+        <li>Reconstruction 3D sous SolidWorks et analyse numérique sous OpenFOAM</li>
+      </ul>
     </div>
 
     <div class="timeline-item">
@@ -546,43 +344,42 @@
       <div class="timeline-date">Fév. – Août 2015</div>
       <div class="timeline-title">Stage Ingénieur – Performances aérauliques de ventilateurs centrifuges</div>
       <div class="timeline-company">ENP Alger</div>
-      <div class="timeline-desc">Caractérisation aéraulique de ventilateurs centrifuges.</div>
+      <ul class="timeline-bullets">
+        <li>Conception, mise en place et étalonnage d'un banc d'essai aéraulique complet</li>
+        <li>Campagnes de mesures (pression, débit, perte de charge) et simulations ANSYS Fluent</li>
+        <li>Rédaction d'un rapport technique avec recommandations d'optimisation</li>
+      </ul>
     </div>
 
   </div>
 </section>
 
-<!-- FORMATION -->
 <section id="formation">
   <div class="reveal">
     <div class="section-label">Formation</div>
     <h2 class="section-title">Parcours <span>académique</span></h2>
   </div>
   <div class="formation-grid reveal">
-
     <div class="formation-card">
       <div class="formation-year">2016 – 2020</div>
       <div class="formation-degree">Doctorat – Mécanique des fluides et Énergétique</div>
-      <div class="formation-school">École Centrale de Lyon</div>
+      <div class="formation-school">École Centrale de Lyon, France</div>
+      <div class="formation-sub">Thèse : Contrôle des fumées d'incendie dans les tunnels ventilés</div>
       <a href="#" class="formation-link">→ Voir la thèse</a>
     </div>
-
     <div class="formation-card">
-      <div class="formation-year">Formation continue</div>
-      <div class="formation-degree">Analyse de données & Machine Learning</div>
-      <div class="formation-school">Python, SQL, Scikit-learn, Pandas</div>
+      <div class="formation-year">2015 – 2016</div>
+      <div class="formation-degree">Master 2 – Mécanique des fluides et Énergétique</div>
+      <div class="formation-school">École Centrale de Lyon, France</div>
     </div>
-
     <div class="formation-card">
-      <div class="formation-year">Antérieur à 2016</div>
-      <div class="formation-degree">Ingénieur en Mécanique des fluides</div>
-      <div class="formation-school">ENP Alger</div>
+      <div class="formation-year">2010 – 2015</div>
+      <div class="formation-degree">Ingénieur d'État + Master 2 Énergétique</div>
+      <div class="formation-school">École Nationale Polytechnique d'Alger, Algérie</div>
     </div>
-
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="reveal">
     <div class="section-label">Contact</div>
@@ -591,20 +388,19 @@
   <div class="contact-box reveal">
     <p>Intéressé par un projet ou une collaboration ? N'hésitez pas à me contacter.</p>
     <div class="contact-links">
-      <a href="mailto:fateh.chaabat@gmail.com" class="contact-link">✉️ fateh.chaabat@gmail.com</a>
+      <a href="mailto:fateh.chaabat@gmail.com" class="contact-link">✉️ Email</a>
       <a href="https://www.linkedin.com/in/fateh-chaabat" target="_blank" class="contact-link">💼 LinkedIn</a>
       <a href="https://github.com/FatehChaabat" target="_blank" class="contact-link">🐙 GitHub</a>
+      <a href="https://www.researchgate.net/profile/Fateh-Chaabat" target="_blank" class="contact-link">🔬 ResearchGate</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Fateh Chaabat – Conçu avec passion</p>
+  <p>© 2026 Fateh Chaabat – Lyon, France</p>
 </footer>
 
 <script>
-  // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
