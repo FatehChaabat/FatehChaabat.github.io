@@ -36,14 +36,14 @@
     /* 
     .hero-tag { display: inline-block; background: rgba(45, 0, 5, 0.6); border: 1px solid rgba(255, 45, 85, 0.3); color: #ff4d6d; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); }
     */
-    .hero-tag {
-  /* --- AJOUT POUR LE POSITIONNEMENT --- */
+   .hero-tag {
+  /* --- POSITIONNEMENT ABSOLU --- */
   position: absolute;
-  top: 2rem;    /* Distance du haut */
-  right: 2rem;  /* Distance de la droite */
-  margin-bottom: 0; /* On enlève la marge car il est "flottant" maintenant */
+  top: 0;      /* Colle au bord supérieur */
+  right: 0;    /* Colle au bord droit */
+  margin: 1rem; /* Ajoute un petit espace de sécurité pour ne pas toucher physiquement le bord de l'écran */
 
-  /* --- TON STYLE EXISTANT --- */
+  /* --- TON STYLE --- */
   display: inline-block;
   background: rgba(45, 0, 5, 0.6);
   border: 1px solid rgba(255, 45, 85, 0.3);
@@ -56,13 +56,14 @@
   text-transform: uppercase;
   box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05);
   backdrop-filter: blur(5px);
-  z-index: 10; /* Pour qu'il reste au-dessus des autres éléments */
+  z-index: 100;
 }
 
-/* --- TRÈS IMPORTANT : Le parent doit être relatif --- */
+/* --- CONDITION INDISPENSABLE --- */
+/* Assure-toi que la section qui contient le tag a cette règle : */
 .hero {
-  position: relative;
-  /* ... reste de ton style .hero ... */
+  position: relative; 
+  overflow: hidden; /* Optionnel : empêche le tag de dépasser si tu l'annimes */
 }
     .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 700; line-height: 1.05; margin-bottom: 0.5rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent1); }
     .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(1rem, 2vw, 1.65rem); font-weight: 600; color: var(--accent2); margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.2s ease both; }
