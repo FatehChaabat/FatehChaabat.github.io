@@ -37,33 +37,28 @@
     .hero-tag { display: inline-block; background: rgba(45, 0, 5, 0.6); border: 1px solid rgba(255, 45, 85, 0.3); color: #ff4d6d; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); }
     */
    .hero-tag {
-  /* --- POSITIONNEMENT ABSOLU --- */
-  position: absolute;
-  top: 0;      /* Colle au bord supérieur */
-  right: 0;    /* Colle au bord droit */
-  margin: 1rem; /* Ajoute un petit espace de sécurité pour ne pas toucher physiquement le bord de l'écran */
+  /* --- LE SECRET POUR LE SORTIR DE LA SECTION --- */
+  position: fixed; /* Il ne suit plus la section, il suit l'écran */
+  top: 1.5rem;     /* Distance du haut de l'écran */
+  right: 1.5rem;   /* Distance de la droite de l'écran */
+  z-index: 9999;   /* On le met au-dessus de TOUT (menu, images, etc.) */
 
-  /* --- TON STYLE --- */
+  /* --- TON STYLE VISUEL (RUBIS) --- */
   display: inline-block;
-  background: rgba(45, 0, 5, 0.6);
-  border: 1px solid rgba(255, 45, 85, 0.3);
+  background: rgba(45, 0, 5, 0.85); /* Un peu plus opaque pour rester lisible sur d'autres fonds */
+  border: 1px solid rgba(255, 45, 85, 0.4);
   color: #ff4d6d;
-  padding: 0.4rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 2rem;
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05);
-  backdrop-filter: blur(5px);
-  z-index: 100;
-}
-
-/* --- CONDITION INDISPENSABLE --- */
-/* Assure-toi que la section qui contient le tag a cette règle : */
-.hero {
-  position: relative; 
-  overflow: hidden; /* Optionnel : empêche le tag de dépasser si tu l'annimes */
+  backdrop-filter: blur(10px); /* Effet flou sur ce qui défile dessous */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  
+  /* On enlève les marges qui pourraient décentrer */
+  margin: 0; 
 }
     .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 700; line-height: 1.05; margin-bottom: 0.5rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent1); }
     .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(1rem, 2vw, 1.65rem); font-weight: 600; color: var(--accent2); margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.2s ease both; }
