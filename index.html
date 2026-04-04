@@ -19,9 +19,14 @@
       --border: rgba(255,255,255,0.07);
     }
 
+    
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    .scroll-bar {position: fixed; top: 0; left: 0; height: 8px; width: 0%; background: linear-gradient(90deg, var(--accent1), var(--accent2)); z-index: 200; transition: width 0.1s; }
+    .scroll-bar-bottom {position: fixed; top: 70px; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--accent1), var(--accent2)); z-index: 200; transition: width 0.1s; }
 
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: rgba(10,15,30,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
     .nav-logo { display: flex; align-items: center; height: 40px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--accent1); letter-spacing: 0.05em; }
@@ -153,7 +158,12 @@
     }
   </style>
 </head>
+
+
 <body>
+
+<div class="scroll-bar" id="scrollBar"></div>
+<div class="scroll-bar-bottom" id="scrollBarBottom"></div>
 
 <nav>
   <div class="nav-logo">FC.</div>
@@ -431,6 +441,14 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   reveals.forEach(r => observer.observe(r));
+
+  window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  document.getElementById('scrollBar').style.width = progress + '%';
+  document.getElementById('scrollBarBottom').style.width = progress + '%';
+});
 </script>
 
 </body>
