@@ -15,7 +15,7 @@
       --accent3: #a78bfa;
       --accent4: #f8fafc;
       --text: #e2e8f0;
-      --muted: #64748b;
+      --muted: #94a3b8;
       --border: rgba(255,255,255,0.07);
     }
 
@@ -24,10 +24,10 @@
     body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
 
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: rgba(10,15,30,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--accent1); letter-spacing: 0.05em; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
-    .nav-links a { color: var(--accent1); text-decoration: none; font-size: 1.2rem; letter-spacing: 0.05em; transition: color 0.3s; }
-    .nav-links a:hover { color: var(--accent2); }
+    .nav-logo { display: flex; align-items: center; height: 40px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--accent1); letter-spacing: 0.05em; }
+    .nav-links { display: flex; align-items: center; justify-content: center; height: 40px; gap: 2rem; list-style: none; flex-wrap: wrap; font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1; background: linear-gradient(90deg, #f59e0b, #ef4444); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links a {  color: var(--muted); text-decoration: none; font-size: 1rem; letter-spacing: 0.05em; transition: color 0.3s; }
+    .nav-links a:hover { color: gold; }
 
     #hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,201,255,0.08) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 20% 80%, rgba(249,115,22,0.07) 0%, transparent 50%), radial-gradient(ellipse 50% 50% at 80% 10%, rgba(167,139,250,0.06) 0%, transparent 50%); }
@@ -35,16 +35,16 @@
     .hero-content { position: relative; z-index: 1; max-width: 750px; }
     /*.hero-tag { display: inline-block; background: rgba(45, 0, 5, 0.6); border: 1px solid rgba(255, 45, 85, 0.3); color: #ff4d6d; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); } */
     /* .hero-tag { position: fixed; top: 6rem; right: 2rem; z-index: 10000; display: inline-block; background: rgba(45, 0, 5, 0.9); border: 1px solid rgba(255, 45, 85, 0.5); color: #ff4d6d; padding: 0.5rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); margin: 0; } */
-    .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 700; line-height: 1.05; margin-bottom: 0.5rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent1); }
+    .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 700; line-height: 1; margin-bottom: 1rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent1); }
     .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(1rem, 2vw, 1.65rem); font-weight: 600; color: var(--accent2); margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.2s ease both; }
-    .hero-desc { color: var(--muted); font-size: 1.4rem; line-height: 1.8; animation: fadeUp 0.8s 0.3s ease both; text-align: justify; margin-bottom: 2.5rem; display: block; }
+    .hero-desc { color: var(--muted); font-size: 1.4rem; line-height: 1.8; animation: fadeUp 0.8s 0.3s ease both; text-align: justify; margin-bottom: 6rem; display: block; }
     /*.hero-cta {background: rgba(232, 255, 172, 0.1) ; border: 1px solid rgba(255, 45, 85, 0.3); padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); } */
     /*.hero-cta { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; animation: fadeUp 0.8s 0.4s ease both; margin-bottom: 2rem; }*/
     .btn { padding: 0.8rem 2rem; border-radius: 0.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; text-decoration: none; cursor: pointer; transition: all 0.3s; display: inline-block; }
     /*.btn-primary { background: var(--accent4); color: var(--bg); }
     .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,201,255,0.3); }*/
-    .btn-primary {display: inline-block; background: rgba(45, 0, 5, 0.6); border: 1px solid rgba(255, 45, 85, 0.3); color: #ff4d6d; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px);}
-    .btn-primary:hover {transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,201,255,0.3); }
+    .btn-primary {display: inline-block; background: rgba(58, 123, 213, 0.3); border: 1px solid rgba(58, 123, 213, 0.6); color: #f0f8ff; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: 0 8px 32px rgba(58, 123, 213, 0.2), inset 0 0 10px rgba(58, 123, 213, 0.1); backdrop-filter: blur(10px);}
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px hsl(0, 97%, 47%); background: hsla(0, 96%, 47%, 0.99); }
     .btn-secondary {display: inline-block; background: rgba(0, 255, 200, 0.1); border: 1px solid rgba(0, 255, 200, 0.3); color: #00ffc8; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; backdrop-filter: blur(5px); }
     .btn-secondary:hover {transform: translateY(-2px); box-shadow: 0 0 15px rgba(227, 255, 115, 0.2); }
 
@@ -78,14 +78,14 @@
     .skill-tag.purple { background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.2); color: var(--accent3); }
 
     .soft-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
-    .soft-card { background: var(--card); border: 1px solid var(--border); border-radius: 0.8rem; padding: 1rem 1.2rem; display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--muted); transition: border-color 0.3s; }
+    .soft-card { background: var(--card); border: 1px solid var(--border); border-radius: 0.8rem; padding: 1rem 1.2rem; display: flex; align-items: center; gap: 0.6rem; font-size: 1rem; color: var(--muted); transition: border-color 0.3s; }
     .soft-card:hover { border-color: var(--accent3); color: var(--text); }
 
     .langues-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
     .langue-card { background: var(--card); border: 1px solid var(--border); border-radius: 0.8rem; padding: 0.8rem 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; min-width: 130px; transition: border-color 0.3s; }
     .langue-card:hover { border-color: var(--accent2); }
-    .langue-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; }
-    .langue-level { font-size: 0.75rem; color: var(--muted); }
+    .langue-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; }
+    .langue-level { font-size: 0.8rem; color: var(--muted); }
 
     #projets { background: var(--surface); }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
@@ -101,8 +101,8 @@
     .project-bullets li { color: var(--muted); font-size: 0.85rem; padding: 0.2rem 0 0.2rem 1rem; position: relative; }
     .project-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent1); }
     .project-links { display: flex; gap: 1rem; }
-    .project-link { color: var(--accent1); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: opacity 0.3s; }
-    .project-link:hover { opacity: 0.7; }
+    .project-link { color: greenyellow; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: opacity 0.3s; }
+    .project-link:hover { color: #0aea0a; opacity: 0.9; font-size: 1.1rem; font-weight: 500; transition: opacity 0.1s, color 0.1s, font-size 1s;}
     .project-link.soon { color: var(--muted); cursor: default; }
 
     #experiences { background: var(--bg); }
@@ -110,18 +110,18 @@
     .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent1), var(--accent3), transparent); }
     .timeline-item { position: relative; margin-bottom: 3rem; padding-left: 2rem; }
     .timeline-dot { position: absolute; left: -2.45rem; top: 0.4rem; width: 12px; height: 12px; border-radius: 50%; background: var(--accent1); border: 2px solid var(--bg); }
-    .timeline-date { font-size: 0.8rem; color: var(--accent2); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .timeline-date { font-size: 1rem; color: var(--accent2); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
     .timeline-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem; }
     .timeline-company { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.8rem; }
     .timeline-bullets { list-style: none; }
-    .timeline-bullets li { color: var(--muted); font-size: 0.88rem; padding: 0.2rem 0 0.2rem 1rem; position: relative; }
+    .timeline-bullets li { color: var(--muted); font-size: 0.88rem; padding: 0.2rem 0 0.2rem 1rem; position: relative; text-align: justify}
     .timeline-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent1); font-size: 0.8rem; }
 
     #formation { background: var(--surface); }
     .formation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     .formation-card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.8rem; transition: border-color 0.3s; }
     .formation-card:hover { border-color: var(--accent3); }
-    .formation-year { font-size: 0.8rem; color: var(--accent3); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .formation-year { font-size: 1rem; color: var(--accent2); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
     .formation-degree { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; }
     .formation-school { color: var(--muted); font-size: 0.9rem; }
     .formation-sub { color: var(--muted); font-size: 0.82rem; margin-top: 0.4rem; font-style: italic; }
@@ -132,7 +132,7 @@
     .contact-box { max-width: 650px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 1.5rem; padding: 3rem; }
     .contact-box p { color: var(--muted); margin-bottom: 2rem; }
     .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .contact-link { display: flex; align-items: center; gap: 0.5rem; color: var(--text); text-decoration: none; font-size: 0.9rem; padding: 0.7rem 1.2rem; border-radius: 0.5rem; border: 1px solid var(--border); transition: all 0.3s; }
+    .contact-link { display: flex; align-items: center; gap: 0.5rem; color: var(--text); text-decoration: none; font-size: 1rem; font-weight: bold; padding: 0.7rem 1.2rem; border-radius: 0.5rem; border: 1px solid var(--border); transition: all 0.3s; }
     .contact-link:hover { border-color: var(--accent1); color: var(--accent1); transform: translateY(-2px); }
 
     footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
@@ -168,12 +168,12 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <h1 class="hero-name">Fateh<br>CAABAT</h1>
+    <h1 class="hero-name">Fateh CAABAT</h1>
     <div class="hero-title">Ingénieur Mécanique des Fluides & Analyse de Données</div>
     <p class="hero-desc">Ingénieur en mécanique des fluides et énergétique, avec expérience en modélisation et simulation CFD, analyse d'écoulements, systèmes de ventilation et phénomènes thermiques/incendie. J'exploite les données et le calcul scientifique pour optimiser les systèmes énergétiques et industriels.</p>
     <div class="hero-cta">
       <a href="#experiences" class="btn btn-primary">Voir mes expériences & réalisations</a>
-      <a href="#contact" class="btn btn-secondary">Me contacter</a>
+      <a href="#contact" class="btn btn-primary">Me contacter</a>
     </div>
     <!---div class="hero-tag">Disponible pour de nouvelles opportunités</div--->
   </div>
@@ -187,9 +187,9 @@
   <div class="apropos-grid reveal">
     <div class="apropos-text">
       <p>Ingénieur-docteur en mécanique des fluides et énergétique (École Centrale de Lyon), je combine une expertise avancée en simulation CFD avec des compétences en analyse de données et en programmation scientifique.</p>
-      <p>Mon parcours me permet d’intervenir sur des problématiques complexes dans les domaines de l’énergie, du nucléaire, de la ventilation et de la thermique incendie, notamment sur le contrôle des fumées en tunnels ventilés.</p>
-      <p>Aujourd’hui, j’exploite Python, SQL et des méthodes de machine learning pour valoriser des données issues de systèmes énergétiques et industriels.</p>
-      <p>📍 Lyon, France</p>
+      <p>Mon parcours me permet d’intervenir sur des problématiques complexes dans les domaines de la mécanique des fluides, de l’énergie, du nucléaire, de la ventilation et de désenfumage adaptées aux environnements confinés.</p>
+      <p>Aujourd’hui, j’exploite Python, SQL et des méthodes de machine learning pour transformer les données de systèmes énergétiques et industriels en leviers de performance concrets.</p>
+      <p style="color: var(--accent2);">📍 Lyon, France</p>
     </div>
     <div class="apropos-stats">
       <div class="stat-card"><div class="stat-num">Ingénieur</div><div class="stat-label">École Centrale de Lyon</div></div>
@@ -207,7 +207,7 @@
   </div>
   <div class="skills-grid reveal">
     <div class="skill-group">
-      <div class="skill-group-title">🌊 CFD / Simulation</div>
+      <div class="skill-group-title">🌊 CFD & Simulation </div>
       <div class="skill-tags"><span class="skill-tag">FDS</span><span class="skill-tag">ANSYS Fluent</span><span class="skill-tag">OpenFOAM</span></div>
     </div>
     <div class="skill-group">
@@ -216,7 +216,7 @@
     </div>
     <div class="skill-group">
       <div class="skill-group-title">📊 Analyse de données</div>
-      <div class="skill-tags"><span class="skill-tag orange">Python (Pandas, NumPy, Scikit-learn)</span><span class="skill-tag orange">Visualisation (Seaborn, Matplotlib)</span><span class="skill-tag orange">MATLAB</span></div>
+      <div class="skill-tags"><span class="skill-tag orange">Python – Data Science (Pandas, NumPy, Scikit-learn)</span><span class="skill-tag orange">Python – Visualisation (Seaborn, Matplotlib)</span><span class="skill-tag orange">Python – Statistiques avancées (SciPy, Statsmodels)</span><span class="skill-tag orange">MATLAB – Modélisation & calcul scientifique</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">🗄️ Base de données</div>
@@ -253,6 +253,15 @@
       <div class="langue-card"><div class="langue-name">Kabyle</div><div class="langue-level">Langue maternelle</div></div>
     </div>
   </div>
+  <div class="reveal" style="margin-top:3rem;">
+  <div class="section-title">Intérêts</div>
+  <div class="soft-grid">
+    <span class="soft-card">⚽ Sport</span>
+    <span class="soft-card">🔬 Sciences & Technologies</span>
+    <span class="soft-card">⚡ Systèmes énergétiques</span>
+    <span class="soft-card">💻 Informatique</span>
+  </div>
+</div>
 </section>
 
 <section id="experiences">
@@ -270,29 +279,39 @@
       <div class="timeline-company">
         <span class="project-tag">Python</span>
         <span class="project-tag">SQL</span>
-        <span class="project-tag">ML</span>
-        <span class="project-tag">DSM</span>
+        <span class="project-tag">Machine Learning</span>
+        <span class="project-tag">Demand Side Management (DSM)</span>
       </div>
       <ul class="timeline-bullets" style="margin-top:0.6rem;">
-        <li>Génération et analyse statistique en SQL (CV, facteur de pointe, Z-score)</li>
-        <li>Détection d'anomalies : Z-score, Z-robuste, IIE, Isolation Forest</li>
-        <li>Analyse de l'inertie thermique par corrélation puissance–température</li>
-        <li>Modélisation prédictive : régression linéaire et Random Forest</li>
-        <li>Optimisation DSM : clipping, load shifting, load reduction</li>
+        <li>Génération et analyse initiale des données (SQL) : Extraction, nettoyage et calcul d’indicateurs clés (coefficient de variation, facteur de pointe, Z-score) pour caractériser les profils de consommation et préparer les analyses avancées</li>
+        <li>Analyse approfondie et détection d’anomalies (Python) : Mise en place d’une approche hybride combinant Z-Score, Z-robuste et Isolation Forest pour identifier les dérives de consommation et anticiper les surcharges sur les réseaux énergétiques</li>
+        <li>Analyse thermo-énergétique des bâtiments/systèmes : Étude de la corrélation puissance–température pour quantifier l’impact climatique et optimiser le pilotage des systèmes HVAC</li>
+        <li>Modélisation prédictive opérationnelle : Développement de modèles (régression linéaire, Random Forest) pour anticiper les besoins et améliorer la planification d’exploitation</li>
+        <li>Optimisation de la demande (DSM) : Simulation et application de stratégies concrètes (clipping, load shifting, load reduction) pour réduire les pics, lisser la charge et améliorer l’efficacité énergétique globale</li>
+        <li> <strong>Application métier & valeur ajoutée :</strong>
+               <div>- Réduction des coûts : limitation des pénalités liées aux dépassements de puissance souscrite</div>
+               <div>- Maintenance préventive : détection des anomalies avant défaillances des systèmes</div>
+               <div>- Pilotage énergétique : indicateurs fiables pour la prise de décision et le dimensionnement opérationnel</div></li>
       </ul>
-      <div style="margin-top:0.8rem;"><a href="https://github.com/FatehChaabat/energy-demand-analytics" target="_blank" class="project-link">→ GitHub</a></div>
+      <div style="margin-top:0.8rem;"><a href="https://github.com/FatehChaabat/energy-demand-analytics" target="_blank" class="project-link">→ <b>Voir le projet sur GitHub</b></a></div>
     </div>
 
     <!-- FREELANCE -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2021 – 2025 | Freelance</div>
-      <div class="timeline-title">Déploiement fibre optique et intégration réseaux informatiques</div>
-      <div class="timeline-company">Lyon</div>
+      <div class="timeline-title">Déploiement réseaux et fibre optique</div>
+      <div class="timeline-company">SAMPRO, CTCOM - Lyon
+        <span style="margin-left:0.5rem;">
+          <span class="project-tag">FTTH/FTTO</span>
+          <span class="project-tag">Switching/Routing</span>
+          <span class="project-tag">Installation/maintenance</span>
+        </span>
+      </div>
       <ul class="timeline-bullets">
-        <li>Installation de réseaux fibre optique et dépannage informatique</li>
-        <li>Formation, coordination et supervision de techniciens</li>
-        <li>Coordination de chantiers et relation client</li>
+        <li>Installation et maintenance de réseaux fibre optique et systèmes informatiques</li>
+        <li>Formation, coordination et supervision de techniciens sur site</li>
+        <li>Gestion de chantiers et relation client/donneur d’ordre</li>
       </ul>
     </div>
 
@@ -300,37 +319,42 @@
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2016 – 2020 | Doctorat</div>
-      <div class="timeline-title">Mécanique des fluides et Énergétique</div>
-      <div class="timeline-company">École Centrale de Lyon</div>
+      <div class="timeline-title">Contrôle des fumées d’incendie dans les tunnels ventilés</div>
+      <div class="timeline-company">École Centrale de Lyon
+        <span style="margin-left:0.5rem;">
+          <span class="project-tag">FDS</span>
+          <span class="project-tag">Matlab</span>
+          <span class="project-tag">Maquette expérimentale</span>
+          <span class="project-tag">PIV</span>
+        </span>
+      </div>
       <ul class="timeline-bullets">
-        <li>Étude expérimentale et numérique sur le contrôle des fumées d'incendie dans les tunnels ventilés</li>
-        <li>Analyse et traitement des données issues de simulations et d'expérimentations</li>
-        <li>Conception et dimensionnement de réseaux de ventilation longitudinale et transversale</li>
-        <li>Étude de l'impact de la forme et position des trappes sur l'efficacité de la ventilation</li>
-        <li>Proposition de solutions innovantes (barrières solides) pour améliorer la sécurité incendie</li>
-        <li>Publication de 2 articles dans "Building and Environment" et présentation dans 2 conférences internationales</li>
+        <li>Contrôle des fumées d’incendie en tunnel : Études expérimentales et simulations numériques pour évaluer et optimiser les systèmes de ventilation</li>
+        <li>Analyse des données expérimentales et numériques : Traitement et interprétation des mesures pour caractériser la dynamique des fumées et la stratiﬁcation thermique</li>
+        <li>Optimisation des trappes et configurations : Étude de l’impact de la position, forme et largeur des trappes sur l’efficacité du confinement des fumées</li>
+        <li>Solutions innovantes de sécurité incendie : Intégration de barrières solides (écrans de cantonnement) pour améliorer la maîtrise des fumées</li>
+        <li>Diffusion scientifique : 2 articles publiés dans Building and Environment et présentations dans 2 conférences internationales</li>
       </ul>
-      <div style="margin-top:0.8rem;"><a href="https://theses.fr/2020LYSEC006" target="_blank" class="project-link">→ Voir la thèse</a></div>
+      <div style="margin-top:0.8rem;"><a href="https://theses.fr/2020LYSEC006" target="_blank" class="project-link">→ <b>Voir la Thèse</b></a></div>
     </div>
 
     <!-- STAGE MÉLANGEUR -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">Mars – Oct. 2016 | Stage Ingénieur R&D</div>
-      <div class="timeline-title">Simulation thermique – Mélangeur chaotique (MLLM)</div>
+      <div class="timeline-title">Etude de l'efficacité thermique d'un mélangeur chaotique (MLLM)</div>
       <div class="timeline-company">École Centrale de Lyon
         <span style="margin-left:0.5rem;">
-          <span class="project-tag">CFD</span>
+          <span class="project-tag">Matlab</span>
           <span class="project-tag">OpenFOAM</span>
           <span class="project-tag">SolidWorks</span>
-          <span class="project-tag">LabVIEW</span>
         </span>
       </div>
       <ul class="timeline-bullets" style="margin-top:0.6rem;">
-        <li>Dispositif expérimental : mélangeur en canal d'eau froide, acquisition de données avec LabVIEW</li>
-        <li>Reconstruction 3D sous SolidWorks et simulations numériques sous OpenFOAM</li>
-        <li>Résultat : le MLLM surpasse un échangeur classique en régime laminaire</li>
-        <li>Recommandations pour applications biologiques et pharmaceutiques à flux contrôlé</li>
+        <li>Objectif : Évaluation et optimisation de l’efficacité thermique des échangeurs en analysant les performances du MLLM (Multi-Level Laminating Mixer) pour améliorer le mélange en régime laminaire à bas nombres de Reynolds</li>
+        <li>Dispositif expérimental : Mélangeur chaotique intégré dans un canal d’eau froide, circulation d’eau chaude pour le transfert thermique, mesures et acquisition de températures automatisées via LabVIEW</li>
+        <li>Simulation numérique : Modélisation thermique et dynamique sous OpenFOAM, reconstruction 3D du mélangeur avec SolidWorks, exploration paramétrique pour validation et complément des expériences</li>
+        <li>Analyse & résultats : Confrontation des données expérimentales et références bibliographiques, montrant que le MLLM surpasse un échangeur classique en régime laminaire, avec applications pour les flux thermiques contrôlés en industries biologiques et pharmaceutiques</li>
       </ul>
     </div>
 
@@ -338,12 +362,18 @@
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">Fév. – Août 2015 | Stage Ingénieur</div>
-      <div class="timeline-title">Performances aérauliques de ventilateurs centrifuges</div>
-      <div class="timeline-company">ENP Alger</div>
+      <div class="timeline-title">Etude des performances aérauliques de ventilateurs centrifuges</div>
+      <div class="timeline-company">ENP Algérie
+        <span style="margin-left:0.5rem;">
+          <span class="project-tag">ANSYS Fluent</span>
+          <span class="project-tag">SolidWorks</span>
+        </span>
+      </div>
       <ul class="timeline-bullets">
-        <li>Conception, mise en place et étalonnage d'un banc d'essai aéraulique complet</li>
-        <li>Campagnes de mesures (pression, débit, perte de charge) et simulations ANSYS Fluent</li>
-        <li>Rédaction d'un rapport technique avec recommandations d'optimisation</li>
+        <li>Objectif : Détermination des performances des ventilateurs à pales courbées vers l’arrière via expérimentation et simulations numériques</li>
+        <li>Conception et expérimentation : Réalisation complète d’un banc d’essai aéraulique avec capteurs de pression, planification et mise en place des campagnes de mesures (pression, débit, pertes de charge)</li>
+        <li>Simulation numérique : Modélisation du banc et du ventilateur avec SolidWorks, maillage et calculs CFD sous ANSYS Fluent (modèle turbulence k-ε), détermination des pertes de charge et performances aérodynamiques</li>
+        <li>Analyse & résultats : Confrontation des données expérimentales et numériques pour valider les modèles, optimiser les performances des ventilateurs et garantir le respect du plan de travail, tout en renforçant les compétences en gestion et suivi de projet</li>
       </ul>
     </div>
 
