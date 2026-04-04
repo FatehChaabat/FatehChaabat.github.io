@@ -35,8 +35,10 @@
     .hero-content { position: relative; z-index: 1; max-width: 750px; }
     /*.hero-tag { display: inline-block; background: rgba(45, 0, 5, 0.6); border: 1px solid rgba(255, 45, 85, 0.3); color: #ff4d6d; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); } */
     /* .hero-tag { position: fixed; top: 6rem; right: 2rem; z-index: 10000; display: inline-block; background: rgba(45, 0, 5, 0.9); border: 1px solid rgba(255, 45, 85, 0.5); color: #ff4d6d; padding: 0.5rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); margin: 0; } */
-    .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 700; line-height: 1; margin-bottom: 1rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent1); }
-    .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.04rem); font-weight: 700; color: var(--accent2); margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.2s ease both; }
+    .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 5.5vw, 5.1rem); font-weight: 700; line-height: 1; margin-bottom: 1rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent1); }
+    .hero-name span { color: var(--accent2); }
+    .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.04rem); font-weight: 700; color: var(--accent1); margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.2s ease both; }
+    .hero-title span { color: var(--accent2); }
     .hero-desc { color: var(--muted); font-size: 1.4rem; line-height: 1.8; animation: fadeUp 0.8s 0.3s ease both; text-align: justify; margin-bottom: 6rem; display: block; }
     /*.hero-cta {background: rgba(232, 255, 172, 0.1) ; border: 1px solid rgba(255, 45, 85, 0.3); padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); } */
     /*.hero-cta { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; animation: fadeUp 0.8s 0.4s ease both; margin-bottom: 2rem; }*/
@@ -168,8 +170,8 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <h1 class="hero-name">Fateh CAABAT</h1>
-    <div class="hero-title">Ingénieur Fluides & Énergie | Data Science</div>
+    <h1 class="hero-name">Fateh <span>CHAABAT</span></h1>
+    <div class="hero-title">Ingénieur Fluides & Énergie | <span>Data Science</span></div>
     <p class="hero-desc">Ingénieur en mécanique des fluides et énergétique, avec expérience en modélisation et simulation CFD, analyse d'écoulements, systèmes de ventilation et phénomènes thermiques/incendie. J'exploite les données et le calcul scientifique pour optimiser les systèmes énergétiques et industriels.</p>
     <div class="hero-cta">
       <a href="#experiences" class="btn btn-primary">Voir mes expériences & réalisations</a>
@@ -182,7 +184,7 @@
 <section id="apropos">
   <div class="reveal">
     <div class="section-label">À propos</div>
-    <h2 class="section-title">Qui suis-<span>je</span> ?</h2>
+    <h2 class="section-title">Qui <span>suis-je</span> ?</h2>
   </div>
   <div class="apropos-grid reveal">
     <div class="apropos-text">
@@ -203,11 +205,11 @@
 <section id="competences">
   <div class="reveal">
     <div class="section-label">Compétences</div>
-    <h2 class="section-title">Technologies &amp; <span>outils</span></h2>
+    <h2 class="section-title">Compétences <span>techniques</span></h2>
   </div>
   <div class="skills-grid reveal">
     <div class="skill-group">
-      <div class="skill-group-title">🌊 CFD & Simulation </div>
+      <div class="skill-group-title">🌊 CFD & Simulation</div>
       <div class="skill-tags"><span class="skill-tag">FDS</span><span class="skill-tag">ANSYS Fluent</span><span class="skill-tag">OpenFOAM</span></div>
     </div>
     <div class="skill-group">
@@ -234,7 +236,7 @@
   </div>
 
   <div class="reveal" style="margin-top:3rem;">
-    <div class="section-title">Soft <span>Skills</span></div>
+    <div class="section-title">Compétences <span>transverses</span></div>
     <div class="soft-grid">
       <div class="soft-card">🧠 Analyse et résolution de problèmes complexes</div>
       <div class="soft-card">📁 Gestion de projets techniques</div>
@@ -254,7 +256,7 @@
     </div>
   </div>
   <div class="reveal" style="margin-top:3rem;">
-  <div class="section-title">Intérêts</div>
+  <div class="section-title">Centres <span>d’intérêt</span></div>
   <div class="soft-grid">
     <span class="soft-card">⚽ Sport</span>
     <span class="soft-card">🔬 Sciences & Technologies</span>
