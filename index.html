@@ -25,14 +25,14 @@
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
 
-    .scroll-bar {position: fixed; top: 0; left: 0; height: 8px; width: 0%; background: linear-gradient(90deg, var(--accent1), var(--accent2)); z-index: 200; transition: width 0.1s; }
-    .scroll-bar-bottom {position: fixed; top: 70px; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--accent1), var(--accent2)); z-index: 200; transition: width 0.1s; }
+    .scroll-bar {position: fixed; top: 0; left: 0; height: 18px; width: 0%; background: linear-gradient(90deg, yellow, red); z-index: 500; transition: width 0.1s; box-shadow: 0 0 8px rgba(0, 201, 255, 0.5); }
+    /*.scroll-bar-bottom {position: fixed; top: 70px; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--accent1), var(--accent2)); z-index: 200; transition: width 0.1s; }*/
 
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: rgba(10,15,30,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
     .nav-logo { display: flex; align-items: center; height: 40px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--accent1); letter-spacing: 0.05em; }
-    .nav-links { display: flex; align-items: center; justify-content: center; height: 40px; gap: 2rem; list-style: none; flex-wrap: wrap; font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1; background: linear-gradient(90deg, #f59e0b, #ef4444); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-    .nav-links a {  color: var(--muted); text-decoration: none; font-size: 1rem; letter-spacing: 0.05em; transition: color 0.3s; }
-    .nav-links a:hover { color: gold; }
+    .nav-links { display: flex; align-items: center; justify-content: center; height: 40px; gap: 2rem; list-style: none; flex-wrap: wrap; font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1; }
+    .nav-links a {  color: var(--accent1); text-decoration: none; font-size: 1rem; letter-spacing: 0.05em; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--accent2); }
 
     #hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,201,255,0.08) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 20% 80%, rgba(249,115,22,0.07) 0%, transparent 50%), radial-gradient(ellipse 50% 50% at 80% 10%, rgba(167,139,250,0.06) 0%, transparent 50%); }
@@ -40,10 +40,10 @@
     .hero-content { position: relative; z-index: 1; max-width: 750px; }
     /*.hero-tag { display: inline-block; background: rgba(45, 0, 5, 0.6); border: 1px solid rgba(255, 45, 85, 0.3); color: #ff4d6d; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); } */
     /* .hero-tag { position: fixed; top: 6rem; right: 2rem; z-index: 10000; display: inline-block; background: rgba(45, 0, 5, 0.9); border: 1px solid rgba(255, 45, 85, 0.5); color: #ff4d6d; padding: 0.5rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); margin: 0; } */
-    .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 5.5vw, 5.1rem); font-weight: 700; line-height: 1; margin-bottom: 1rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent1); }
+    .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 600; line-height: 1; margin-bottom: 1rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent2); }
     .hero-name span { color: var(--accent2); }
     .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.04rem); font-weight: 700; color: var(--accent1); margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.2s ease both; }
-    .hero-title span { color: var(--accent2); }
+    .hero-title span { color: var(--accent4); }
     .hero-desc { color: var(--muted); font-size: 1.4rem; line-height: 1.8; animation: fadeUp 0.8s 0.3s ease both; text-align: justify; margin-bottom: 6rem; display: block; }
     /*.hero-cta {background: rgba(232, 255, 172, 0.1) ; border: 1px solid rgba(255, 45, 85, 0.3); padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); } */
     /*.hero-cta { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; animation: fadeUp 0.8s 0.4s ease both; margin-bottom: 2rem; }*/
@@ -51,7 +51,7 @@
     /*.btn-primary { background: var(--accent4); color: var(--bg); }
     .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,201,255,0.3); }*/
     .btn-primary {display: inline-block; background: rgba(58, 123, 213, 0.3); border: 1px solid rgba(58, 123, 213, 0.6); color: #f0f8ff; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: 0 8px 32px rgba(58, 123, 213, 0.2), inset 0 0 10px rgba(58, 123, 213, 0.1); backdrop-filter: blur(10px);}
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px hsl(0, 97%, 47%); background: hsla(0, 96%, 47%, 0.99); }
+    .btn-primary:hover {background: var(--accent1); transform: translateY(-2px); box-shadow: 0 8px 25px color(var(--accent2)); color:var(--accent2); }
     .btn-secondary {display: inline-block; background: rgba(0, 255, 200, 0.1); border: 1px solid rgba(0, 255, 200, 0.3); color: #00ffc8; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; backdrop-filter: blur(5px); }
     .btn-secondary:hover {transform: translateY(-2px); box-shadow: 0 0 15px rgba(227, 255, 115, 0.2); }
 
@@ -63,7 +63,7 @@
     .section-title { font-size: 1.4rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent1); margin-bottom: 0.5rem; font-weight: 700; }
     .section-title span { color: var(--accent2); }
     .section-label { font-family: 'Syne', sans-serif ; font-size: clamp(1.5rem, 3vw, 2rem) ; font-weight: 800 ; line-height: 1.1; margin-bottom: 2.2rem; text-align: center ;
-                    display: block ; width: 100% ; background: linear-gradient(90deg, #f59e0b, #ef4444); }
+                    display: block ; width: 100% ; background: linear-gradient(90deg, var(--accent1)); }
 
     #apropos { background: var(--surface); }
     .apropos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
@@ -80,7 +80,7 @@
     .skill-group:hover { border-color: var(--accent1); transform: translateY(-4px); }
     .skill-group-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem; }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .skill-tag { background: rgba(0,201,255,0.08); border: 1px solid rgba(0,201,255,0.2); color: var(--accent1); padding: 0.25rem 0.75rem; border-radius: 2rem; font-size: 0.8rem; }
+    .skill-tag { background: rgba(0,201,255,0.08); border: 1px solid rgba(0,201,255,0.2); color: var(--muted); padding: 0.25rem 0.75rem; border-radius: 2rem; font-size: 0.8rem; }
     .skill-tag.orange { background: rgba(249,115,22,0.08); border-color: rgba(249,115,22,0.2); color: var(--accent2); }
     .skill-tag.purple { background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.2); color: var(--accent3); }
 
@@ -108,8 +108,8 @@
     .project-bullets li { color: var(--muted); font-size: 0.85rem; padding: 0.2rem 0 0.2rem 1rem; position: relative; }
     .project-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent1); }
     .project-links { display: flex; gap: 1rem; }
-    .project-link { color: greenyellow; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: opacity 0.3s; }
-    .project-link:hover { color: #0aea0a; opacity: 0.9; font-size: 1.1rem; font-weight: 500; transition: opacity 0.1s, color 0.1s, font-size 1s;}
+    .project-link { color: var(--accent1); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: opacity 0.3s; }
+    .project-link:hover { color: var(--accent2); opacity: 0.9; }
     .project-link.soon { color: var(--muted); cursor: default; }
 
     #experiences { background: var(--bg); }
@@ -117,7 +117,7 @@
     .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent1), var(--accent3), transparent); }
     .timeline-item { position: relative; margin-bottom: 3rem; padding-left: 2rem; }
     .timeline-dot { position: absolute; left: -2.45rem; top: 0.4rem; width: 12px; height: 12px; border-radius: 50%; background: var(--accent1); border: 2px solid var(--bg); }
-    .timeline-date { font-size: 1rem; color: var(--accent2); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .timeline-date { font-size: 1rem; color: var(--accent4); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
     .timeline-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem; }
     .timeline-company { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.8rem; }
     .timeline-bullets { list-style: none; }
@@ -128,10 +128,10 @@
     .formation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     .formation-card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.8rem; transition: border-color 0.3s; }
     .formation-card:hover { border-color: var(--accent3); }
-    .formation-year { font-size: 1rem; color: var(--accent2); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .formation-year { font-size: 1rem; color: var(--accent4); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
     .formation-degree { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; }
     .formation-school { color: var(--muted); font-size: 0.9rem; }
-    .formation-sub { color: var(--muted); font-size: 0.82rem; margin-top: 0.4rem; font-style: italic; }
+    .formation-sub { color: var(--accent1); font-size: 0.82rem; margin-top: 0.4rem; font-style: italic; }
     .formation-link { display: inline-block; margin-top: 0.8rem; color: var(--accent1); font-size: 0.8rem; text-decoration: none; }
     .formation-link:hover { text-decoration: underline; }
 
@@ -163,7 +163,7 @@
 <body>
 
 <div class="scroll-bar" id="scrollBar"></div>
-<div class="scroll-bar-bottom" id="scrollBarBottom"></div>
+<!---div class="scroll-bar-bottom" id="scrollBarBottom"></div--->
 
 <nav>
   <div class="nav-logo">FC.</div>
@@ -180,8 +180,8 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <h1 class="hero-name">Fateh <span>CHAABAT</span></h1>
-    <div class="hero-title">Ingénieur Fluides & Énergie | <span>Data Science</span></div>
+    <h1 class="hero-name">Fateh CHAABAT</h1>
+    <div class="hero-title"><span>Ingénieur Fluides & Énergie | Data Science</span></div>
     <p class="hero-desc">Ingénieur en mécanique des fluides et énergétique, avec expérience en modélisation et simulation CFD, analyse d'écoulements, systèmes de ventilation et phénomènes thermiques/incendie. J'exploite les données et le calcul scientifique pour optimiser les systèmes énergétiques et industriels.</p>
     <div class="hero-cta">
       <a href="#experiences" class="btn btn-primary">Voir mes expériences & réalisations</a>
@@ -194,7 +194,7 @@
 <section id="apropos">
   <div class="reveal">
     <div class="section-label">À propos</div>
-    <h2 class="section-title">Qui <span>suis-je</span> ?</h2>
+    <h2 class="section-title"><span>Qui suis-je ?</span></h2>
   </div>
   <div class="apropos-grid reveal">
     <div class="apropos-text">
@@ -215,7 +215,7 @@
 <section id="competences">
   <div class="reveal">
     <div class="section-label">Compétences</div>
-    <h2 class="section-title">Compétences <span>techniques</span></h2>
+    <h2 class="section-title"><span>Compétences techniques</span></h2>
   </div>
   <div class="skills-grid reveal">
     <div class="skill-group">
@@ -228,25 +228,34 @@
     </div>
     <div class="skill-group">
       <div class="skill-group-title">📊 Analyse de données</div>
-      <div class="skill-tags"><span class="skill-tag orange">Python – Data Science (Pandas, NumPy, Scikit-learn)</span><span class="skill-tag orange">Python – Visualisation (Seaborn, Matplotlib)</span><span class="skill-tag orange">Python – Statistiques avancées (SciPy, Statsmodels)</span><span class="skill-tag orange">MATLAB – Modélisation & calcul scientifique</span></div>
+      <!---div class="skill-tags"><span class="skill-tag ">Python – Data Science (Pandas, NumPy, Scikit-learn)</span><span class="skill-tag ">Python – Visualisation (Seaborn, Matplotlib)</span><span class="skill-tag ">Python – Statistiques avancées (SciPy, Statsmodels)</span><span class="skill-tag ">MATLAB – Modélisation & calcul scientifique</span></div--->
+     <div class="skill-tags">
+        <span class="skill-tag" style="display: block;">
+          <strong>Python :</strong><br>
+          · Data Science (Pandas, NumPy, Scikit-learn)<br>
+          · Visualisation (Seaborn, Matplotlib)<br>
+          · Statistiques avancées (SciPy, Statsmodels)
+        </span>
+        <span class="skill-tag">MATLAB : Modélisation & calcul scientifique</span>
+      </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">🗄️ Base de données</div>
-      <div class="skill-tags"><span class="skill-tag orange">SQL (PostgreSQL, SQL Server)</span><span class="skill-tag orange">Excel</span></div>
+      <div class="skill-tags"><span class="skill-tag ">SQL (PostgreSQL, SQL Server)</span><span class="skill-tag ">Excel</span></div>
     </div>
 
     <div class="skill-group">
       <div class="skill-group-title">💻 Développement Web</div>
-      <div class="skill-tags"><span class="skill-tag purple">HTML</span><span class="skill-tag purple">CSS</span><span class="skill-tag purple">JavaScript</span></div>
+      <div class="skill-tags"><span class="skill-tag ">HTML</span><span class="skill-tag ">CSS</span><span class="skill-tag ">JavaScript</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">🖥️ OS & Bureautique</div>
-      <div class="skill-tags"><span class="skill-tag purple">Linux</span><span class="skill-tag purple">Windows</span></div>
+      <div class="skill-tags"><span class="skill-tag ">Linux</span><span class="skill-tag ">Windows</span></div>
     </div>
   </div>
 
   <div class="reveal" style="margin-top:3rem;">
-    <div class="section-title">Compétences <span>transverses</span></div>
+    <div class="section-title"><span>Compétences transverses</span></div>
     <div class="soft-grid">
       <div class="soft-card">🧠 Analyse et résolution de problèmes complexes</div>
       <div class="soft-card">📁 Gestion de projets techniques</div>
@@ -257,7 +266,7 @@
   </div>
 
   <div class="reveal" style="margin-top:3rem;">
-    <div class="section-title">Langues</div>
+    <div class="section-title"><span>Langues</span></div>
     <div class="langues-grid">
       <div class="langue-card"><div class="langue-name">Français</div><div class="langue-level">Courant</div></div>
       <div class="langue-card"><div class="langue-name">Anglais</div><div class="langue-level">Compétences techniques</div></div>
@@ -266,7 +275,7 @@
     </div>
   </div>
   <div class="reveal" style="margin-top:3rem;">
-  <div class="section-title">Centres <span>d’intérêt</span></div>
+  <div class="section-title"><span>Centres d’intérêt</span></div>
   <div class="soft-grid">
     <span class="soft-card">⚽ Sport</span>
     <span class="soft-card">🔬 Sciences & Technologies</span>
@@ -279,7 +288,7 @@
 <section id="experiences">
   <div class="reveal">
     <div class="section-label">Expériences & Réalisations</div>
-    <h2 class="section-title">Parcours <span>professionnel</span></h2>
+    <h2 class="section-title"><span>Parcours professionnel</span></h2>
   </div>
   <div class="timeline reveal">
 
@@ -395,7 +404,7 @@
 <section id="formation">
   <div class="reveal">
     <div class="section-label">Formation</div>
-    <h2 class="section-title">Parcours <span>académique</span></h2>
+    <h2 class="section-title"><span>Parcours académique</span></h2>
   </div>
   <div class="formation-grid reveal">
     <div class="formation-card">
@@ -447,7 +456,6 @@
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const progress = (scrollTop / docHeight) * 100;
   document.getElementById('scrollBar').style.width = progress + '%';
-  document.getElementById('scrollBarBottom').style.width = progress + '%';
 });
 </script>
 
