@@ -199,8 +199,8 @@
   <div class="apropos-grid reveal">
     <div class="apropos-text">
       <p>Ingénieur-docteur en mécanique des fluides et énergétique (École Centrale de Lyon), je combine une expertise avancée en simulation CFD avec des compétences en analyse de données et en programmation scientifique.</p>
-      <p>Mon parcours me permet d’intervenir sur des problématiques complexes dans les domaines de la mécanique des fluides, de l’énergie, du nucléaire, de la ventilation et de désenfumage adaptées aux environnements confinés.</p>
-      <p>Aujourd’hui, j’exploite Python, SQL et Power BI pour transformer les données de systèmes énergétiques et industriels en leviers de performance concrets.</p>
+      <p>Mon parcours me permet d'intervenir sur des problématiques complexes dans les domaines de la mécanique des fluides, de l'énergie, du nucléaire, de la ventilation et de désenfumage adaptées aux environnements confinés.</p>
+      <p>Aujourd'hui, j'exploite Python, SQL et Power BI pour transformer les données de systèmes énergétiques et industriels en leviers de performance concrets.</p>
       <p style="color: var(--accent2);">📍 Lyon, France</p>
     </div>
     <div class="apropos-stats">
@@ -292,12 +292,60 @@
     <h2 class="section-title"><span>Parcours professionnel</span></h2>
   </div>
   <div class="timeline reveal">
+    
+    <!-- PROJET DATA 3 -->
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2026 | Projet personnel</div>
+      <div class="timeline-title">Pipeline de données industriels SCADA & export cloud Azure</div>
+
+      <div class="timeline-company">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">SQL Server</span>
+        <span class="project-tag">Azure Blob Storage</span>
+        <span class="project-tag">ETL</span>
+        <span class="project-tag">Medallion Architecture</span>
+      </div>
+
+      <ul class="timeline-bullets" style="margin-top:0.6rem;">
+
+        <li>Conception d'un pipeline de données industriel end-to-end basé sur une architecture Medallion (Bronze / Silver / Gold), simulant un système de supervision de capteurs de type SCADA</li>
+
+        <li>Implémentation d'un pipeline ETL robuste (CSV → SQL Server → Python → SQL Server → Azure Blob Storage) intégrant des mécanismes de fallback automatique, retry et logging pour garantir la fiabilité des traitements</li>
+
+        <li>Traitement et enrichissement des données (Python) : nettoyage, validation qualité, structuration et calcul de features statistiques (min, max, moyenne, écart-type) pour exploitation analytique</li>
+
+        <li>Détection d'anomalies : implémentation d'un Z-Score par capteur et équipement afin d'identifier les dérives et comportements anormaux</li>
+
+        <li>Stockage et historisation des données dans SQL Server avec gestion des couches Bronze et Gold, et traçabilité des traitements (batch_id, logs d'exécution)</li>
+
+        <li>Export cloud : export des données vers Azure Blob Storage en format Parquet avec partitionnement (type capteur / date) pour optimisation analytique</li>
+
+        <li>Automatisation complète du pipeline : exécution planifiée via Windows Task Scheduler avec monitoring et traçabilité des runs</li>
+
+        <li>
+          <strong>Application métier & valeur ajoutée :</strong>
+          <div>- Structuration industrielle des données via une architecture Medallion (Bronze / Silver / Gold) pour un traitement progressif et exploitable</div>
+          <div>- Mise en place d’un pipeline data cloud robuste avec intégration SQL Server → Python → Azure Blob Storage</div>
+          <div>- Industrialisation des flux de données avec gestion des erreurs (retry, fallback multi-sources) et traçabilité complète des traitements</div>
+        </li>
+
+      </ul>
+
+      <div style="margin-top:0.8rem;">
+        <a href="https://github.com/FatehChaabat/industrial-data-pipeline-scada"
+          target="_blank"
+          class="project-link">
+          → <b>Voir le projet sur GitHub</b>
+        </a>
+      </div>
+    </div>
 
     <!-- PROJET DATA 2 -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2026 | Projet personnel</div>
-      <div class="timeline-title">Pipeline de données capteurs industriels & détection d’anomalies</div>
+      <div class="timeline-title">Pipeline de données capteurs industriels & détection d'anomalies</div>
       <div class="timeline-company">
         <span class="project-tag">Python</span>
         <span class="project-tag">SQL Server</span>
@@ -311,7 +359,7 @@
         
         <li>Détection d'anomalies : implémentation d'un Z-Score par machine et capteur pour identifier les dérives et comportements anormaux</li>
         
-        <li>Développement d’un dashboard Power BI interactif : filtres dynamiques (machine, capteur, timestamp), KPI (nombre et taux d’anomalies), calculs DAX (min, moyenne, max) intégrés aux filtres, treemap et histogrammes analytiques</li>
+        <li>Développement d'un dashboard Power BI interactif : filtres dynamiques (machine, capteur, timestamp), KPI (nombre et taux d'anomalies), calculs DAX (min, moyenne, max) intégrés aux filtres, treemap et histogrammes analytiques</li>
         
         <li>Automatisation complète du pipeline : exécution planifiée via Windows Task Scheduler avec traçabilité des runs et monitoring des traitements</li>
         
@@ -336,11 +384,11 @@
         <span class="project-tag">Demand Side Management (DSM)</span>
       </div>
       <ul class="timeline-bullets" style="margin-top:0.6rem;">
-        <li>Génération et analyse initiale des données (SQL) : Extraction, nettoyage et calcul d’indicateurs clés (coefficient de variation, facteur de pointe, Z-score) pour caractériser les profils de consommation et préparer les analyses avancées</li>
-        <li>Analyse approfondie et détection d’anomalies (Python) : Mise en place d’une approche hybride combinant Z-Score, Z-robuste et Isolation Forest pour identifier les dérives de consommation et anticiper les surcharges sur les réseaux énergétiques</li>
-        <li>Analyse thermo-énergétique des bâtiments/systèmes : Étude de la corrélation puissance–température pour quantifier l’impact climatique et optimiser le pilotage des systèmes HVAC</li>
-        <li>Modélisation prédictive opérationnelle : Développement de modèles (régression linéaire, Random Forest) pour anticiper les besoins et améliorer la planification d’exploitation</li>
-        <li>Optimisation de la demande (DSM) : Simulation et application de stratégies concrètes (clipping, load shifting, load reduction) pour réduire les pics, lisser la charge et améliorer l’efficacité énergétique globale</li>
+        <li>Génération et analyse initiale des données (SQL) : Extraction, nettoyage et calcul d'indicateurs clés (coefficient de variation, facteur de pointe, Z-score) pour caractériser les profils de consommation et préparer les analyses avancées</li>
+        <li>Analyse approfondie et détection d'anomalies (Python) : Mise en place d'une approche hybride combinant Z-Score, Z-robuste et Isolation Forest pour identifier les dérives de consommation et anticiper les surcharges sur les réseaux énergétiques</li>
+        <li>Analyse thermo-énergétique des bâtiments/systèmes : Étude de la corrélation puissance–température pour quantifier l'impact climatique et optimiser le pilotage des systèmes HVAC</li>
+        <li>Modélisation prédictive opérationnelle : Développement de modèles (régression linéaire, Random Forest) pour anticiper les besoins et améliorer la planification d'exploitation</li>
+        <li>Optimisation de la demande (DSM) : Simulation et application de stratégies concrètes (clipping, load shifting, load reduction) pour réduire les pics, lisser la charge et améliorer l'efficacité énergétique globale</li>
         <li> <strong>Application métier & valeur ajoutée :</strong>
                <div>- Réduction des coûts : limitation des pénalités liées aux dépassements de puissance souscrite</div>
                <div>- Maintenance préventive : détection des anomalies avant défaillances des systèmes</div>
@@ -364,7 +412,7 @@
       <ul class="timeline-bullets">
         <li>Installation et maintenance de réseaux fibre optique et systèmes informatiques</li>
         <li>Formation, coordination et supervision de techniciens sur site</li>
-        <li>Gestion de chantiers et relation client/donneur d’ordre</li>
+        <li>Gestion de chantiers et relation client/donneur d'ordre</li>
       </ul>
     </div>
 
@@ -372,7 +420,7 @@
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2016 – 2020 | Doctorat</div>
-      <div class="timeline-title">Contrôle des fumées d’incendie dans les tunnels ventilés</div>
+      <div class="timeline-title">Contrôle des fumées d'incendie dans les tunnels ventilés</div>
       <div class="timeline-company">École Centrale de Lyon
         <span style="margin-left:0.5rem;">
           <span class="project-tag">FDS</span>
@@ -382,9 +430,9 @@
         </span>
       </div>
       <ul class="timeline-bullets">
-        <li>Contrôle des fumées d’incendie en tunnel : Études expérimentales et simulations numériques pour évaluer et optimiser les systèmes de ventilation</li>
+        <li>Contrôle des fumées d'incendie en tunnel : Études expérimentales et simulations numériques pour évaluer et optimiser les systèmes de ventilation</li>
         <li>Analyse des données expérimentales et numériques : Traitement et interprétation des mesures pour caractériser la dynamique des fumées et la stratiﬁcation thermique</li>
-        <li>Optimisation des trappes et configurations : Étude de l’impact de la position, forme et largeur des trappes sur l’efficacité du confinement des fumées</li>
+        <li>Optimisation des trappes et configurations : Étude de l'impact de la position, forme et largeur des trappes sur l'efficacité du confinement des fumées</li>
         <li>Solutions innovantes de sécurité incendie : Intégration de barrières solides (écrans de cantonnement) pour améliorer la maîtrise des fumées</li>
         <li>Diffusion scientifique : 2 articles publiés dans Building and Environment et présentations dans 2 conférences internationales</li>
       </ul>
@@ -404,8 +452,8 @@
         </span>
       </div>
       <ul class="timeline-bullets" style="margin-top:0.6rem;">
-        <li>Objectif : Évaluation et optimisation de l’efficacité thermique des échangeurs en analysant les performances du MLLM (Multi-Level Laminating Mixer) pour améliorer le mélange en régime laminaire à bas nombres de Reynolds</li>
-        <li>Dispositif expérimental : Mélangeur chaotique intégré dans un canal d’eau froide, circulation d’eau chaude pour le transfert thermique, mesures et acquisition de températures automatisées via LabVIEW</li>
+        <li>Objectif : Évaluation et optimisation de l'efficacité thermique des échangeurs en analysant les performances du MLLM (Multi-Level Laminating Mixer) pour améliorer le mélange en régime laminaire à bas nombres de Reynolds</li>
+        <li>Dispositif expérimental : Mélangeur chaotique intégré dans un canal d'eau froide, circulation d'eau chaude pour le transfert thermique, mesures et acquisition de températures automatisées via LabVIEW</li>
         <li>Simulation numérique : Modélisation thermique et dynamique sous OpenFOAM, reconstruction 3D du mélangeur avec SolidWorks, exploration paramétrique pour validation et complément des expériences</li>
         <li>Analyse & résultats : Confrontation des données expérimentales et références bibliographiques, montrant que le MLLM surpasse un échangeur classique en régime laminaire, avec applications pour les flux thermiques contrôlés en industries biologiques et pharmaceutiques</li>
       </ul>
@@ -423,8 +471,8 @@
         </span>
       </div>
       <ul class="timeline-bullets">
-        <li>Objectif : Détermination des performances des ventilateurs à pales courbées vers l’arrière via expérimentation et simulations numériques</li>
-        <li>Conception et expérimentation : Réalisation complète d’un banc d’essai aéraulique avec capteurs de pression, planification et mise en place des campagnes de mesures (pression, débit, pertes de charge)</li>
+        <li>Objectif : Détermination des performances des ventilateurs à pales courbées vers l'arrière via expérimentation et simulations numériques</li>
+        <li>Conception et expérimentation : Réalisation complète d'un banc d'essai aéraulique avec capteurs de pression, planification et mise en place des campagnes de mesures (pression, débit, pertes de charge)</li>
         <li>Simulation numérique : Modélisation du banc et du ventilateur avec SolidWorks, maillage et calculs CFD sous ANSYS Fluent (modèle turbulence k-ε), détermination des pertes de charge et performances aérodynamiques</li>
         <li>Analyse & résultats : Confrontation des données expérimentales et numériques pour valider les modèles, optimiser les performances des ventilateurs et garantir le respect du plan de travail, tout en renforçant les compétences en gestion et suivi de projet</li>
       </ul>
