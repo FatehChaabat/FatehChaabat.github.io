@@ -328,43 +328,36 @@
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2026 | Projet personnel</div>
-      <div class="timeline-title">Solveur de réseau HVAC & Analyse énergétique (API-First)</div>
+      <div class="timeline-title">Solveur Aéraulique HVAC Haute Performance (API-First)</div>
 
       <div class="timeline-company">
         <span class="project-tag">Python</span>
         <span class="project-tag">FastAPI</span>
         <span class="project-tag">NumPy</span>
         <span class="project-tag">NetworkX</span>
-        <span class="project-tag">REST API</span>
+        <span class="project-tag">Engineering Simulation</span>
       </div>
 
       <ul class="timeline-bullets" style="margin-top:0.6rem;">
-
-        <li>Moteur de calcul aéraulique nodal basé sur une modélisation non linéaire, permettant le dimensionnement et l'équilibrage automatique de réseaux de ventilation complexes</li>
-
-        <li>Modélisation physique rigoureuse : implémentation des équations de Darcy-Weisbach pour le calcul des pertes de charge (linéaires et singulières) avec support des géométries circulaires et rectangulaires</li>
-
-        <li>Solveur numérique itératif : développement d'un algorithme de relaxation nodale pour la résolution du système pression/débit, assurant la convergence vers l'équilibre hydraulique du réseau</li>
-
-        <li>Analyse énergétique intégrée : calcul automatique de la puissance ventilateur requise et estimation de la consommation électrique annuelle (OPEX) selon les scénarios d'usage</li>
-
-        <li>Architecture API-First (FastAPI) : exposition du moteur de calcul via une API REST documentée (Swagger), permettant l'intégration du solveur dans des workflows d'optimisation</li>
-
-        <li>Visualisation dynamique du réseau : génération automatique de schémas techniques via NetworkX et Matplotlib, incluant un encodage visuel des débits et des types de conduits</li>
-
-        <li>
-          <strong>Application métier & valeur ajoutée :</strong>
-          <div>- Alternative Open-Source aux logiciels propriétaires pour un pré-dimensionnement rapide, transparent et automatisable</div>
-          <div>- Aide à la décision pour bureaux d'études : validation des pertes de charge et optimisation du confort acoustique (vitesses d'air)</div>
-          <div>- Prêt pour l'industrialisation : moteur de calcul intégrable dans des solutions SaaS de gestion de l'énergie ou des plateformes BIM</div>
+        <li><strong>Modélisation physique rigoureuse :</strong> Solveur haute fidélité utilisant Darcy-Weisbach et Colebrook-White (méthode par bisection) avec intégration des lois des gaz parfaits et de Sutherland pour une adaptation précise aux conditions réelles (altitude, température).</li>
+        
+        <li><strong>Solveur numérique robuste :</strong> Implémentation d'un algorithme à relaxation nodale (Kirchhoff) exploitant une stratégie de convergence en deux phases (frottement pur, puis singularités dynamiques) pour garantir la stabilité sur toutes topologies (arborescentes, confluentes, multi-sources).</li>
+        
+        <li><strong>Expertise en singularités (Idelchik) :</strong> Calcul automatisé des jonctions (divisions/confluences) et transitions (Borda-Carnot) avec gestion fine des gains d'inertie ($\zeta$ négatifs) pour une précision de calcul extrême.</li>
+        
+        <li><strong>Optimisation & Équilibrage :</strong> Identification du circuit critique via l'algorithme de Dijkstra (Bernoulli généralisé) permettant un dimensionnement précis des ventilateurs et la génération automatique d'une table d'équilibrage par bridage ($\zeta$ extra).</li>
+        
+        <li><strong>Architecture API-First & Industrialisation :</strong> API REST (FastAPI/Pydantic) robuste permettant l'import complet de projets et la génération automatisée de rapports techniques complets (bilan réseau, audit hydraulique, analyse acoustique) et exports JSON normés pour le flux BIM.</li>
+        
+        <li><strong>Valeur ajoutée métier :</strong>
+          <div style="margin-top:0.4rem;">- Alternative open-source à haute précision pour le pré-dimensionnement technique.</div>
+          <div>- Aide à la décision automatisée incluant recommandations de dimensionnement et conformité aux standards AMCA/Almeco.</div>
+          <div>- Moteur prêt pour l'intégration dans des écosystèmes SaaS de jumeaux numériques.</div>
         </li>
-
       </ul>
 
       <div style="margin-top:0.8rem;">
-        <a href="https://github.com/FatehChaabat/hvac-network-solver"
-          target="_blank"
-          class="project-link">
+        <a href="https://github.com/FatehChaabat/hvac-network-solver" target="_blank" class="project-link">
           → <b>Voir le projet sur GitHub</b>
         </a>
       </div>
