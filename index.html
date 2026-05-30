@@ -40,9 +40,9 @@
     .hero-content { position: relative; z-index: 1; max-width: 750px; }
     /*.hero-tag { display: inline-block; background: rgba(45, 0, 5, 0.6); border: 1px solid rgba(255, 45, 85, 0.3); color: #ff4d6d; padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); } */
     /* .hero-tag { position: fixed; top: 6rem; right: 2rem; z-index: 10000; display: inline-block; background: rgba(45, 0, 5, 0.9); border: 1px solid rgba(255, 45, 85, 0.5); color: #ff4d6d; padding: 0.5rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); margin: 0; } */
-    .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 600; line-height: 1; margin-bottom: 1rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent2); }
+    .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 3vw, 3rem); font-weight: 600; line-height: 1; margin-bottom: 1rem; animation: fadeUp 0.8s 0.1s ease both; color: var(--accent2); }
     .hero-name span { color: var(--accent2); }
-    .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.04rem); font-weight: 700; color: var(--accent1); margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.2s ease both; }
+    .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 1.6vw, 1.6rem); font-weight: 600; color: var(--accent1); margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.2s ease both; }
     .hero-title span { color: var(--accent4); }
     .hero-desc { color: var(--muted); font-size: 1.4rem; line-height: 1.4; animation: fadeUp 0.8s 0.3s ease both; text-align: justify; margin-bottom: 6rem; display: block; }
     /*.hero-cta {background: rgba(232, 255, 172, 0.1) ; border: 1px solid rgba(255, 45, 85, 0.3); padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.05); backdrop-filter: blur(5px); } */
@@ -84,7 +84,7 @@
     .skill-tag.orange { background: rgba(249,115,22,0.08); border-color: rgba(249,115,22,0.2); color: var(--accent2); }
     .skill-tag.purple { background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.2); color: var(--accent3); }
 
-    .soft-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .soft-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem;  }
     .soft-card { background: var(--card); border: 1px solid var(--border); border-radius: 0.8rem; padding: 1rem 1.2rem; display: flex; align-items: center; gap: 0.6rem; font-size: 1rem; color: var(--muted); transition: border-color 0.3s; }
     .soft-card:hover { border-color: var(--accent3); color: var(--text); }
 
@@ -201,9 +201,12 @@
 
     </div>
 
-    <h1 class="hero-name">Fateh CHAABAT</h1>
-    <div class="hero-title"><span>Ingénieur Énergie & Data Industrielle</span></div>
-    <p class="hero-desc">Ingénieur en mécanique des fluides et énergétique, avec expérience en modélisation et simulation CFD, analyse d'écoulements, systèmes de ventilation et phénomènes thermiques/incendie. J'exploite les données et le calcul scientifique pour optimiser les systèmes énergétiques et industriels.</p>
+    <h1 class="hero-name">
+      <span style="color: var(--accent1);">Fateh</span> 
+      <span style="color: var(--accent2);">CHAABAT</span>
+    </h1>
+    <div class="hero-title"><span>Ingénieur-Docteur | Mécanique des Fluides & Énergétique</span></div>
+    <p class="hero-desc">Spécialiste en <strong>simulation CFD et ingénierie CVC</strong>, je conçois des solveurs aérauliques et des pipelines de données industrielles (SCADA) pour transformer l'efficacité énergétique des installations complexes. L'alliance de la physique fondamentale et de la donnée au service de l'optimisation industrielle.</p>
     <div class="hero-cta">
       <a href="#experiences" class="btn btn-primary">Voir mes expériences & réalisations</a>
       <a href="#contact" class="btn btn-primary">Me contacter</a>
@@ -215,20 +218,26 @@
 <section id="apropos">
   <div class="reveal">
     <div class="section-label">À propos</div>
-    <h2 class="section-title"><span>Qui suis-je ?</span></h2>
-  </div>
+    <h2 class="section-title">
+      <span style="color: var(--accent1);">Qui </span>
+      <span style="color: var(--accent2);">suis-Je ?</span>
+    </h2>
+  </div>  
   <div class="apropos-grid reveal">
     <div class="apropos-text">
-      <p>Ingénieur-docteur en mécanique des fluides et énergétique (École Centrale de Lyon), je combine une expertise avancée en simulation CFD avec des compétences en analyse de données et en programmation scientifique.</p>
-      <p>Mon parcours me permet d'intervenir sur des problématiques complexes dans les domaines de la mécanique des fluides, de l'énergie, du nucléaire, de la ventilation et de désenfumage adaptées aux environnements confinés.</p>
-      <p>Aujourd'hui, j'exploite Python, SQL et Power BI pour transformer les données de systèmes énergétiques et industriels en leviers de performance concrets.</p>
-      <p style="color: var(--accent2);">📍 Lyon, France</p>
-    </div>
+      <p>Ingénieur-Docteur diplômé de l'<strong>École Centrale de Lyon</strong>, mon expertise se situe à la croisée de la mécanique des fluides complexe et de l'analyse de données industrielles.</p>      
+      <p>Fort d'une solide expérience en <strong>simulation CFD</strong> et en modélisation physique (tunnels, sécurité incendie, réseaux CVC), je conçois des outils de calcul scientifique haute performance pour répondre aux enjeux de performance énergétique des infrastructures critiques.</p>      
+      <p>Aujourd'hui, j'allie cette rigueur scientifique à la puissance du <strong>Data Engineering (Python, SQL)</strong> et de la Data Visualization (Power BI) pour transformer des données brutes en leviers d'optimisation concrets pour l'industrie et le bâtiment.</p>      
+      <p style="font-weight: 600;">
+        <span style="color: var(--accent1);">📍 Lyon, France</span> 
+        <span style="color: var(--accent2);">| Ouvert aux opportunités à forte dominante technique</span>
+      </p>
+    </div>    
     <div class="apropos-stats">
-      <div class="stat-card"><div class="stat-num">Ingénieur</div><div class="stat-label">École Centrale de Lyon</div></div>
-      <div class="stat-card"><div class="stat-num">+3</div><div class="stat-label">Années d'expérience</div></div>
-      <div class="stat-card"><div class="stat-num">CFD</div><div class="stat-label">Simulation & modélisation numérique</div></div>
-      <div class="stat-card"><div class="stat-num">Data</div><div class="stat-label">Analyse & optimisation</div></div>
+      <div class="stat-card"><div class="stat-num">Ph.D.</div><div class="stat-label">Mécanique des Fluides</div></div>
+      <div class="stat-card"><div class="stat-num">CFD</div><div class="stat-label">Simulation & Modélisation</div></div>
+      <div class="stat-card"><div class="stat-num">CVC</div><div class="stat-label">Expertise Aéraulique</div></div>
+      <div class="stat-card"><div class="stat-num">Data</div><div class="stat-label">Pipeline & Optimisation</div></div>
     </div>
   </div>
 </section>
@@ -236,63 +245,44 @@
 <section id="competences">
   <div class="reveal">
     <div class="section-label">Compétences</div>
-    <h2 class="section-title"><span>Compétences techniques</span></h2>
+    <h2 class="section-title"><span>Expertise Technique</span></h2>
   </div>
+
   <div class="skills-grid reveal">
     <div class="skill-group">
-      <div class="skill-group-title">🌊 CFD & Simulation</div>
-      <div class="skill-tags"><span class="skill-tag">FDS</span><span class="skill-tag">ANSYS Fluent</span><span class="skill-tag">OpenFOAM</span></div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">🔧 Conception CAO</div>
-      <div class="skill-tags"><span class="skill-tag">SolidWorks</span><span class="skill-tag">CATIA</span></div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">🗄️ Data & Base de données</div>
-      <!---div class="skill-tags"><span class="skill-tag ">Python – Data Science (Pandas, NumPy, Scikit-learn)</span><span class="skill-tag ">Python – Visualisation (Seaborn, Matplotlib)</span><span class="skill-tag ">Python – Statistiques avancées (SciPy, Statsmodels)</span><span class="skill-tag ">MATLAB – Modélisation & calcul scientifique</span></div--->
-     <div class="skill-tags">
-        <span class="skill-tag"><strong>Python</strong></span>
-        <span class="skill-tag">Pandas / NumPy</span>
-        <span class="skill-tag">Scikit-learn</span>
-        <span class="skill-tag">Matplotlib / Seaborn</span>
-
-        <span class="skill-tag">MATLAB</span>
-
-        <span class="skill-tag">SQL Server</span>
-
-        <span class="skill-tag">Power BI</span>
-
-        <span class="skill-tag">Excel</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">⚙️ Data Engineering & Cloud</div>
+      <div class="skill-group-title">🌊 Simulation & Conception</div>
       <div class="skill-tags">
-        <span class="skill-tag">ETL Pipelines</span>
-        <span class="skill-tag">SCADA simulé</span>
-        <span class="skill-tag">Automatisation (Task Scheduler)</span>
-        <span class="skill-tag">Monitoring pipelines</span>
-        <span class="skill-tag">Azure Blob Storage</span>
+        <span class="skill-tag">FDS</span><span class="skill-tag">ANSYS Fluent</span>
+        <span class="skill-tag">OpenFOAM</span><span class="skill-tag">SolidWorks</span><span class="skill-tag">CATIA</span>
       </div>
     </div>
 
     <div class="skill-group">
-      <div class="skill-group-title">💻 Développement Web</div>
-      <div class="skill-tags"><span class="skill-tag ">HTML</span><span class="skill-tag ">CSS</span><span class="skill-tag ">JavaScript</span></div>
+      <div class="skill-group-title">📊 Data Science & Ingénierie</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span><span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">MATLAB</span><span class="skill-tag">SQL Server</span>
+        <span class="skill-tag">Power BI</span><span class="skill-tag">ETL Pipelines</span>
+        <span class="skill-tag">Azure Blob</span><span class="skill-tag">SCADA</span>
+      </div>
     </div>
+
     <div class="skill-group">
-      <div class="skill-group-title">🖥️ Outils</div>
-      <div class="skill-tags"><span class="skill-tag ">Linux</span><span class="skill-tag">Git / GitHub</span><span class="skill-tag ">Windows</span></div>
+      <div class="skill-group-title">💻 IT & Développement</div>
+      <div class="skill-tags">
+        <span class="skill-tag">HTML/CSS/JS</span>
+        <span class="skill-tag">Linux</span><span class="skill-tag">Git / GitHub</span>
+      </div>
     </div>
   </div>
 
   <div class="reveal" style="margin-top:3rem;">
-    <div class="section-title"><span>Compétences transverses</span></div>
+    <div class="section-title"><span>Soft Skills</span></div>
     <div class="soft-grid">
-      <div class="soft-card">🧠 Analyse et résolution de problèmes complexes</div>
+      <div class="soft-card">🧠 Résolution de problèmes complexes</div>
       <div class="soft-card">📁 Gestion de projets techniques</div>
-      <div class="soft-card">🔍 Autonomie dans la recherche et l'analyse</div>
-      <div class="soft-card">📢 Communication technique</div>
+      <div class="soft-card">🔍 Analyse critique & Autonomie</div>
+      <div class="soft-card">📢 Communication scientifique</div>
       <div class="soft-card">🤝 Travail en équipe pluridisciplinaire</div>
     </div>
   </div>
@@ -306,15 +296,16 @@
       <div class="langue-card"><div class="langue-name">Kabyle</div><div class="langue-level">Langue maternelle</div></div>
     </div>
   </div>
+
   <div class="reveal" style="margin-top:3rem;">
-  <div class="section-title"><span>Centres d’intérêt</span></div>
-  <div class="soft-grid">
-    <span class="soft-card">⚽ Sport</span>
-    <span class="soft-card">🔬 Sciences & Technologies</span>
-    <span class="soft-card">⚡ Systèmes énergétiques</span>
-    <span class="soft-card">💻 Informatique</span>
+    <div class="section-title"><span>Passions</span></div>
+    <div class="soft-grid">
+      <span class="soft-card">⚽ Sport</span>
+      <span class="soft-card">🔬 Sciences</span>
+      <span class="soft-card">⚡ Énergétique</span>
+      <span class="soft-card">💻 Informatique</span>
+    </div>
   </div>
-</div>
 </section>
 
 <section id="experiences">
@@ -327,225 +318,467 @@
     <!-- PROJET DATA 4 -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2026 | Projet personnel</div>
-      <div class="timeline-title">Solveur Aéraulique HVAC Haute Performance (API-First)</div>
-
+      <div class="timeline-date">2025 – Présent | Projet personnel</div>
+      <div class="timeline-title">Solveur Aéraulique HVAC Haute Performance — Moteur de Calcul & API REST</div>
       <div class="timeline-company">
         <span class="project-tag">Python</span>
         <span class="project-tag">FastAPI</span>
-        <span class="project-tag">NumPy</span>
         <span class="project-tag">NetworkX</span>
+        <span class="project-tag">Darcy-Weisbach</span>
+        <span class="project-tag">Colebrook-White</span>
+        <span class="project-tag">Idelchik</span>
+        <span class="project-tag">Bernoulli</span>
         <span class="project-tag">Engineering Simulation</span>
       </div>
 
-      <ul class="timeline-bullets" style="margin-top:0.6rem;">
-        <li><strong>Modélisation physique rigoureuse :</strong> Solveur haute fidélité utilisant Darcy-Weisbach et Colebrook-White (méthode par bisection) avec intégration des lois des gaz parfaits et de Sutherland pour une adaptation précise aux conditions réelles (altitude, température).</li>
-        
-        <li><strong>Solveur numérique robuste :</strong> Implémentation d'un algorithme à relaxation nodale (Kirchhoff) exploitant une stratégie de convergence en deux phases (frottement pur, puis singularités dynamiques) pour garantir la stabilité sur toutes topologies (arborescentes, confluentes, multi-sources).</li>
-        
-        <li><strong>Expertise en singularités (Idelchik) :</strong> Calcul automatisé des jonctions (divisions/confluences) et transitions (Borda-Carnot) avec gestion fine des gains d'inertie (ζ négatifs) pour une précision de calcul extrême.</li>
-        
-        <li><strong>Optimisation & Équilibrage :</strong> Identification du circuit critique via l'algorithme de Dijkstra (Bernoulli généralisé) permettant un dimensionnement précis des ventilateurs et la génération automatique d'une table d'équilibrage par bridage (ζ extra).</li>
-        
-        <li><strong>Architecture API-First & Industrialisation :</strong> API REST (FastAPI/Pydantic) robuste permettant l'import complet de projets et la génération automatisée de rapports techniques complets (bilan réseau, audit hydraulique, analyse acoustique) et exports JSON normés pour le flux BIM.</li>
-        
-        <li><strong>Valeur ajoutée métier :</strong>
-          <div style="margin-top:0.4rem;">- Alternative open-source à haute précision pour le pré-dimensionnement technique.</div>
-          <div>- Aide à la décision automatisée incluant recommandations de dimensionnement et conformité aux standards AMCA/Almeco.</div>
-          <div>- Moteur prêt pour l'intégration dans des écosystèmes SaaS de jumeaux numériques.</div>
-        </li>
-      </ul>
-
-      <div style="margin-top:0.8rem;">
-        <a href="https://github.com/FatehChaabat/hvac-network-solver" target="_blank" class="project-link">
-          → <b>Voir le projet sur GitHub</b>
+      <!-- Liens rapides -->
+      <div style="margin-top:0.6rem; margin-bottom:0.8rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <a href="https://hvac-api-wtuu.onrender.com/docs" target="_blank"
+           style="display:inline-flex; align-items:center; gap:0.4rem; background:#0ea5e9; color:#fff; padding:0.35rem 0.9rem; border-radius:6px; font-size:0.82rem; font-weight:600; text-decoration:none;">
+          🚀 Démo live (Render)
+        </a>
+        <a href="https://github.com/FatehChaabat/hvac-network-solver" target="_blank"
+           style="display:inline-flex; align-items:center; gap:0.4rem; background:#1e293b; color:#fff; padding:0.35rem 0.9rem; border-radius:6px; font-size:0.82rem; font-weight:600; text-decoration:none;">
+          📂 Documentation GitHub
         </a>
       </div>
+
+      <!-- Bloc résumé accrocheur -->
+      <p style="font-size:0.9rem; color:#475569; margin-bottom:0.9rem; line-height:1.6;">
+        Moteur de calcul aéraulique <strong>haute précision</strong> dédié au dimensionnement automatique
+        des réseaux de ventilation CVC complexes. Conçu selon une approche <strong>physique rigoureuse</strong>
+        (Colebrook-White, modèles Idelchik, Bernoulli généralisé) et déployé en production via une
+        <strong>API REST industrielle</strong> — avec génération automatisée de rapports PDF, schémas
+        topologiques PNG et exports JSON pour intégration BIM/CAO.
+      </p>
+
+      <ul class="timeline-bullets" style="margin-top:0;">
+
+        <li><strong>Physique des fluides haute fidélité :</strong>
+          Modélisation complète des pertes de charge linéaires (Darcy-Weisbach) et singulières,
+          avec résolution exacte de <strong>Colebrook-White par bisection</strong> (précision &lt; 10⁻¹⁰).
+          Propriétés de l'air calculées dynamiquement via la <strong>loi des gaz parfaits</strong> (modèle ISA)
+          et l'équation de <strong>Sutherland</strong> — dimensionnement réaliste pour toute altitude et température.
+        </li>
+
+        <li><strong>Solveur nodal non linéaire — convergence garantie :</strong>
+          Algorithme de <strong>relaxation nodale adaptative</strong> (Newton-Raphson, facteur w ∈ [0.02 – 0.3])
+          respectant strictement les lois de Kirchhoff. Stratégie de convergence en <strong>deux phases</strong> :
+          convergence primaire sur frottement pur et singularités constantes, puis activation des singularités dynamiques sur débits stables —
+          résidu final <strong>&lt; 10⁻⁹ m³/s</strong> (≈ 3.6 mL/h). Supporte toutes topologies :
+          arborescentes, confluentes, <strong>multi-ventilateurs</strong>, soufflage et extraction.
+        </li>
+
+        <li><strong>Singularités dynamiques avancées (Idelchik) :</strong>
+          Calcul automatique des pertes de charge des <strong>tés</strong> (division/confluence détectée
+          localement au nœud — indépendamment du mode global) et des <strong>transitions
+          convergent/divergent</strong> (Borda-Carnot pondéré) affectées systématiquement sur la
+          petite section de référence. Gestion rigoureuse des <strong>ζ négatifs</strong>
+          (gains d'inertie en extraction) isolés et appliqués en post-traitement sans déstabiliser le solveur.
+        </li>
+
+        <li><strong>Dimensionnement multi-ventilateurs & équilibrage hydraulique :</strong>
+          Identification du <strong>circuit critique individuel</strong> par ventilateur via
+          <strong>l'algorithme de Dijkstra</strong>, couplé à la formule de Bernoulli généralisée
+          (méthodes B/C Almeco/AMCA). Calcul de la puissance absorbée par rendement propre (η_i),
+          génération automatique d'une <strong>table d'équilibrage</strong> avec coefficient de bridage
+          (K-Factor) pour chaque terminal — et estimation de l'<strong>OPEX annuel</strong>.
+        </li>
+
+        <li><strong>API REST industrielle & livrables automatisés :</strong>
+          API <strong>FastAPI/Pydantic</strong> (OpenAPI 3.1) avec import global de projet en une requête,
+          validation topologique et géométrique automatique, et catalogue d'accessoires intégré (ζ prêts à l'emploi).
+          Génération automatisée de <strong>rapports PDF professionnels</strong> (bilan réseau, audit hydraulique,
+          analyse acoustique, recommandations de redimensionnement), <strong>schémas PNG</strong>
+          annotés et <strong>exports JSON normalisés</strong> pour intégration directe en BIM/CAO.
+          Application <strong>déployée en production sur Render</strong> avec interface Swagger UI.
+        </li>
+
+        <li><strong>Précision numérique & validation :</strong>
+          Résultats vérifiés analytiquement par calcul Colebrook-White manuel et bilans de Bernoulli —
+          cohérence parfaite entre pressions nodales du solveur et pertes calculées sur chaque chemin.
+        </li>
+
+        <li><strong>Valeur ajoutée métier :</strong>
+          <div style="margin-top:0.5rem; display:flex; flex-direction:column; gap:0.3rem;">
+            <div>→ <strong>Alternative open-source haute précision</strong> aux logiciels propriétaires pour le pré-dimensionnement CVC tertiaire et industriel.</div>
+            <div>→ <strong>Aide à la décision automatisée</strong> : recommandations acoustiques, table d'équilibrage, conformité AMCA/Almeco — sans intervention manuelle.</div>
+            <div>→ <strong>Architecture prête pour SaaS</strong> : API-First, exports BIM/JSON normalisés, déploiement cloud — intégration native dans les écosystèmes de jumeaux numériques.</div>
+            <div>→ <strong>Extensible</strong> : support multi-ventilateurs, multi-bouches, soufflage/extraction, topologies complexes — conçu pour évoluer vers le calcul thermique couplé.</div>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- Métriques clés -->
+      <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#0369a1; font-weight:600;">
+          ✅ Singularités dynamiques modélisées
+        </div>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#15803d; font-weight:600;">
+          ✅ Multi-ventilateurs & topologies complexes
+        </div>
+        <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#7e22ce; font-weight:600;">
+          ✅ Résidu &lt; 10⁻⁹ m³/s
+        </div>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#c2410c; font-weight:600;">
+          ✅ Rapports PDF & exports BIM/JSON
+        </div>
+        <div style="background:#fefce8; border:1px solid #fde68a; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#92400e; font-weight:600;">
+          ✅ Déployé en production (Render)
+        </div>
+      </div>
+
     </div>
     
     <!-- PROJET DATA 3 -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2026 | Projet personnel</div>
-      <div class="timeline-title">Pipeline de données industriels SCADA & export cloud Azure</div>
+      <div class="timeline-date">2025 – 2026 | Projet personnel</div>
+      <div class="timeline-title">Pipeline de Données Industriel SCADA & Architecture Cloud</div>
 
       <div class="timeline-company">
         <span class="project-tag">Python</span>
         <span class="project-tag">SQL Server</span>
         <span class="project-tag">Azure Blob Storage</span>
-        <span class="project-tag">ETL</span>
+        <span class="project-tag">ETL/ELT</span>
         <span class="project-tag">Medallion Architecture</span>
       </div>
 
-      <ul class="timeline-bullets" style="margin-top:0.6rem;">
+      <div style="margin-top:0.6rem; margin-bottom:0.8rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <a href="https://github.com/FatehChaabat/industrial-data-pipeline-scada" target="_blank"
+          style="display:inline-flex; align-items:center; gap:0.4rem; background:#1e293b; color:#fff; padding:0.35rem 0.9rem; border-radius:6px; font-size:0.82rem; font-weight:600; text-decoration:none;">
+          📂 Documentation GitHub & Code source
+        </a>
+      </div>
 
-        <li>Conception d'un pipeline de données industriel end-to-end basé sur une architecture Medallion (Bronze / Silver / Gold), simulant un système de supervision de capteurs de type SCADA</li>
+      <p style="font-size:0.9rem; color:#475569; margin-bottom:0.9rem; line-height:1.6;">
+        Conception d'une <strong>infrastructure Data industrielle end-to-end</strong> simulant un système SCADA. 
+        Basée sur une <strong>architecture Medallion</strong> robuste, ce pipeline automatise la collecte, 
+        la fiabilisation et l'export Cloud (Azure) de flux de données capteurs, garantissant 
+        une <strong>traçabilité totale</strong> et une haute disponibilité pour l'analytique.
+      </p>
 
-        <li>Implémentation d'un pipeline ETL robuste (CSV → SQL Server → Python → SQL Server → Azure Blob Storage) intégrant des mécanismes de fallback automatique, retry et logging pour garantir la fiabilité des traitements</li>
-
-        <li>Traitement et enrichissement des données (Python) : nettoyage, validation qualité, structuration et calcul de features statistiques (min, max, moyenne, écart-type) pour exploitation analytique</li>
-
-        <li>Détection d'anomalies : implémentation d'un Z-Score par capteur et équipement afin d'identifier les dérives et comportements anormaux</li>
-
-        <li>Stockage et historisation des données dans SQL Server avec gestion des couches Bronze et Gold, et traçabilité des traitements (batch_id, logs d'exécution)</li>
-
-        <li>Export cloud : export des données vers Azure Blob Storage en format Parquet avec partitionnement (type capteur / date) pour optimisation analytique</li>
-
-        <li>Automatisation complète du pipeline : exécution planifiée via Windows Task Scheduler avec monitoring et traçabilité des runs</li>
-
-        <li>
-          <strong>Application métier & valeur ajoutée :</strong>
-          <div>- Structuration industrielle des données via une architecture Medallion (Bronze / Silver / Gold) pour un traitement progressif et exploitable</div>
-          <div>- Mise en place d’un pipeline data cloud robuste avec intégration SQL Server → Python → Azure Blob Storage</div>
-          <div>- Industrialisation des flux de données avec gestion des erreurs (retry, fallback multi-sources) et traçabilité complète des traitements</div>
-        </li>
-
+      <ul class="timeline-bullets" style="margin-top:0;">
+        <li><strong>Architecture Medallion (Bronze/Silver/Gold) :</strong> Structuration rigoureuse des données permettant un traitement progressif : ingestion brute (Bronze), nettoyage/validation (Silver), et agrégations métiers prêtes pour l'exploitation (Gold).</li>
+        
+        <li><strong>Pipeline ETL/ELT Haute Fiabilité :</strong> Implémentation d'un workflow robuste (SQL Server ↔ Python) intégrant des mécanismes avancés de <strong>fallback automatique</strong>, <strong>retry</strong> et <strong>logging transactionnel</strong> (batch_id) pour une intégrité totale des flux.</li>
+        
+        <li><strong>Traitement & Enrichissement Analytique :</strong> Moteur de calcul Python haute performance effectuant le nettoyage, la validation qualité et le calcul de features statistiques (moyennes mobiles, écart-types) pour la caractérisation des états machine.</li>
+        
+        <li><strong>Détection d'anomalies en temps réel :</strong> Algorithme de scoring par <strong>Z-Score adaptatif</strong> appliqué par capteur et équipement, permettant l'identification proactive des dérives et comportements anormaux au sein des séries temporelles.</li>
+        
+        <li><strong>Export Cloud & Optimisation Parquet :</strong> Déploiement d'un export automatisé vers <strong>Azure Blob Storage</strong> en format <strong>Parquet</strong>, avec stratégie de partitionnement intelligent (type_capteur / date) pour optimiser les performances analytiques.</li>
+        
+        <li><strong>Industrialisation & Monitoring :</strong> Automatisation complète orchestrée par <strong>Windows Task Scheduler</strong> avec monitoring intégré et traçabilité exhaustive des exécutions, assurant une maintenabilité de niveau production.</li>
       </ul>
 
-      <div style="margin-top:0.8rem;">
-        <a href="https://github.com/FatehChaabat/industrial-data-pipeline-scada"
-          target="_blank"
-          class="project-link">
-          → <b>Voir le projet sur GitHub</b>
-        </a>
+      <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#0369a1; font-weight:600;">
+          ✅ Architecture Medallion (B/S/G)
+        </div>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#15803d; font-weight:600;">
+          ✅ Détection d'anomalies (Z-Score)
+        </div>
+        <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#7e22ce; font-weight:600;">
+          ✅ Optimisation Parquet & Partitionnement
+        </div>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#c2410c; font-weight:600;">
+          ✅ Pipeline ETL Robuste (Retry/Fallback)
+        </div>
+        <div style="background:#f1f5f9; border:1px solid #cbd5e1; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#475569; font-weight:600;">
+          ✅ Automatisation (Win Task Scheduler)
+        </div>
       </div>
     </div>
 
     <!-- PROJET DATA 2 -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2026 | Projet personnel</div>
-      <div class="timeline-title">Pipeline de données capteurs industriels & détection d'anomalies</div>
+      <div class="timeline-date">2025 – 2026 | Projet personnel</div>
+      <div class="timeline-title">Pipeline de Données Capteurs Industriels & Détection d'Anomalies</div>
+
       <div class="timeline-company">
         <span class="project-tag">Python</span>
         <span class="project-tag">SQL Server</span>
         <span class="project-tag">Power BI</span>
         <span class="project-tag">ETL</span>
+        <span class="project-tag">Maintenance Prédictive</span>
       </div>
-     <ul class="timeline-bullets" style="margin-top:0.6rem;">
-        <li>Conception d'un pipeline ETL automatisé (CSV → SQL Server → Python → SQL Server → Power BI) pour simuler un système industriel de supervision capteurs</li>
+
+      <div style="margin-top:0.6rem; margin-bottom:0.8rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <a href="https://github.com/fatehchaabat/industrial-sensor-data-pipeline" target="_blank"
+          style="display:inline-flex; align-items:center; gap:0.4rem; background:#1e293b; color:#fff; padding:0.35rem 0.9rem; border-radius:6px; font-size:0.82rem; font-weight:600; text-decoration:none;">
+          📂 Documentation GitHub & Code source
+        </a>
+      </div>
+
+      <p style="font-size:0.9rem; color:#475569; margin-bottom:0.9rem; line-height:1.6;">
+        Conception d'une <strong>solution end-to-end de supervision industrielle</strong>. Ce pipeline automatise 
+        l'ingestion, le nettoyage et l'analyse statistique de données capteurs pour identifier des comportements 
+        anormaux, le tout visualisé via une <strong>interface décisionnelle interactive</strong> (Power BI) pour 
+        faciliter la maintenance conditionnelle.
+      </p>
+
+      <ul class="timeline-bullets" style="margin-top:0;">
+        <li><strong>Pipeline ETL Industriel :</strong> Orchestration automatisée d'un flux de données (CSV ↔ Python ↔ SQL Server ↔ Power BI), garantissant l'intégrité et la disponibilité des séries temporelles capteurs.</li>
         
-        <li>Traitement et enrichissement des données (Python) : nettoyage, calcul de statistiques (min, max, moyenne) et structuration des données pour exploitation analytique</li>
+        <li><strong>Traitement & Moteur Statistique :</strong> Nettoyage et enrichissement des données par Python, incluant le calcul de métriques agrégées et une structuration rigoureuse pour l'analyse.</li>
         
-        <li>Détection d'anomalies : implémentation d'un Z-Score par machine et capteur pour identifier les dérives et comportements anormaux</li>
+        <li><strong>Détection d'anomalies (Z-Score) :</strong> Implémentation d'un algorithme de scoring adaptatif par équipement, permettant d'isoler statistiquement les dérives opératoires avant qu'elles ne deviennent critiques.</li>
         
-        <li>Développement d'un dashboard Power BI interactif : filtres dynamiques (machine, capteur, timestamp), KPI (nombre et taux d'anomalies), calculs DAX (min, moyenne, max) intégrés aux filtres, treemap et histogrammes analytiques</li>
+        <li><strong>Business Intelligence & Data Viz :</strong> Développement d'un dashboard Power BI décisionnel piloté par des KPI dynamiques (taux d'anomalies). Maîtrise des calculs DAX complexes pour le filtrage temporel avancé et implémentation de visualisations analytiques ciblées (treemaps, tableaux, histogrammes, etc.).</li>
         
-        <li>Automatisation complète du pipeline : exécution planifiée via Windows Task Scheduler avec traçabilité des runs et monitoring des traitements</li>
-        
-        <li> <strong>Application métier & valeur ajoutée :</strong>
-                <div>- Supervision industrielle : suivi en continu de plusieurs équipements et capteurs</div>
-                <div>- Maintenance conditionnelle : détection précoce des anomalies avant défaillance</div>
-                <div>- Aide à la décision : indicateurs fiables pour analyser les performances machines</div>
-        </li>
-     </ul>
-      <div style="margin-top:0.8rem;"><a href="https://github.com/fatehchaabat/industrial-sensor-data-pipeline" target="_blank" class="project-link">→ <b>Voir le projet sur GitHub</b></a></div>
+        <li><strong>Industrialisation du flux :</strong> Automatisation complète des tâches via <strong>Windows Task Scheduler</strong> avec traçabilité intégrale des exécutions, logs de monitoring et gestion des erreurs.</li>
+      </ul>
+
+      <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#0369a1; font-weight:600;">
+          ✅ Maintenance conditionnelle & prédictive
+        </div>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#15803d; font-weight:600;">
+          ✅ Modèle Z-Score adaptatif
+        </div>
+        <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#7e22ce; font-weight:600;">
+          ✅ BI décisionnelle (DAX & Power BI)
+        </div>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#c2410c; font-weight:600;">
+          ✅ Automatisation (Win Task Scheduler)
+        </div>
+      </div>
     </div>
     
     <!-- PROJET DATA 1 -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2026 | Projet personnel</div>
-      <div class="timeline-title">Analyse et gestion de la consommation énergétique</div>
+      <div class="timeline-date">2025 | Projet personnel</div>
+      <div class="timeline-title">Analytics Énergétique & Optimisation du Demand Side Management (DSM)</div>
+
       <div class="timeline-company">
         <span class="project-tag">Python</span>
         <span class="project-tag">SQL</span>
         <span class="project-tag">Machine Learning</span>
-        <span class="project-tag">Demand Side Management (DSM)</span>
+        <span class="project-tag">Energy Analytics</span>
+        <span class="project-tag">DSM</span>
       </div>
-      <ul class="timeline-bullets" style="margin-top:0.6rem;">
-        <li>Génération et analyse initiale des données (SQL) : Extraction, nettoyage et calcul d'indicateurs clés (coefficient de variation, facteur de pointe, Z-score) pour caractériser les profils de consommation et préparer les analyses avancées</li>
-        <li>Analyse approfondie et détection d'anomalies (Python) : Mise en place d'une approche hybride combinant Z-Score, Z-robuste et Isolation Forest pour identifier les dérives de consommation et anticiper les surcharges sur les réseaux énergétiques</li>
-        <li>Analyse thermo-énergétique des bâtiments/systèmes : Étude de la corrélation puissance–température pour quantifier l'impact climatique et optimiser le pilotage des systèmes HVAC</li>
-        <li>Modélisation prédictive opérationnelle : Développement de modèles (régression linéaire, Random Forest) pour anticiper les besoins et améliorer la planification d'exploitation</li>
-        <li>Optimisation de la demande (DSM) : Simulation et application de stratégies concrètes (clipping, load shifting, load reduction) pour réduire les pics, lisser la charge et améliorer l'efficacité énergétique globale</li>
-        <li> <strong>Application métier & valeur ajoutée :</strong>
-               <div>- Réduction des coûts : limitation des pénalités liées aux dépassements de puissance souscrite</div>
-               <div>- Maintenance préventive : détection des anomalies avant défaillances des systèmes</div>
-               <div>- Pilotage énergétique : indicateurs fiables pour la prise de décision et le dimensionnement opérationnel</div></li>
+
+      <div style="margin-top:0.6rem; margin-bottom:0.8rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <a href="https://github.com/FatehChaabat/energy-demand-analytics" target="_blank"
+          style="display:inline-flex; align-items:center; gap:0.4rem; background:#1e293b; color:#fff; padding:0.35rem 0.9rem; border-radius:6px; font-size:0.82rem; font-weight:600; text-decoration:none;">
+          📂 Documentation GitHub & Code source
+        </a>
+      </div>
+
+      <p style="font-size:0.9rem; color:#475569; margin-bottom:0.9rem; line-height:1.6;">
+        Solution avancée de <strong>Data Science appliquée à l'efficacité énergétique</strong>. Ce projet 
+        exploite des algorithmes de ML pour caractériser les profils de consommation, détecter les 
+        anomalies de dérive, et simuler des stratégies de <strong>Demand Side Management (DSM)</strong> 
+        pour optimiser l'équilibrage des charges et réduire les coûts opérationnels (OPEX).
+      </p>
+
+      <ul class="timeline-bullets" style="margin-top:0;">
+        <li><strong>Data Mining & Caractérisation (SQL/Python) :</strong> Extraction et nettoyage de séries temporelles énergétiques. Calcul d'indicateurs de performance (coefficient de variation, facteur de pointe, Z-score) pour la segmentation des profils de consommation.</li>
+        
+        <li><strong>Détection d'anomalies hybride :</strong> Implémentation d'une chaîne robuste associant méthodes statistiques (Z-Robust) et algorithmes non supervisés (<strong>Isolation Forest</strong>) pour identifier proactivement les surcharges et anomalies de fonctionnement.</li>
+        
+        <li><strong>Analyse Thermo-énergétique :</strong> Modélisation de la corrélation puissance–température pour quantifier l'impact climatique, permettant d'isoler la signature énergétique intrinsèque des bâtiments et systèmes HVAC.</li>
+        
+        <li><strong>Modélisation Prédictive & DSM :</strong> Développement de modèles de prévision (<strong>Random Forest, Régression</strong>) et simulation de stratégies DSM : <em>Clipping</em> (écrêtage), <em>Load Shifting</em> (décalage) et <em>Load Reduction</em>.</li>
+        
+        <li><strong>Stratégie de pilotage opérationnel :</strong> Aide à la décision automatisée pour l'optimisation des appels de puissance, visant la réduction des dépassements souscrits et la maximisation de l'efficience énergétique globale.</li>
       </ul>
-      <div style="margin-top:0.8rem;"><a href="https://github.com/FatehChaabat/energy-demand-analytics" target="_blank" class="project-link">→ <b>Voir le projet sur GitHub</b></a></div>
+
+      <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#0369a1; font-weight:600;">
+          ✅ Isolation Forest & Détection d'anomalies
+        </div>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#15803d; font-weight:600;">
+          ✅ Stratégies DSM (Clipping/Shifting)
+        </div>
+        <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#7e22ce; font-weight:600;">
+          ✅ Analyse Thermo-énergétique
+        </div>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#c2410c; font-weight:600;">
+          ✅ Optimisation des coûts (OPEX)
+        </div>
+      </div>
     </div>
 
     <!-- FREELANCE -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2021 – 2025 | Freelance</div>
-      <div class="timeline-title">Déploiement réseaux et fibre optique</div>
-      <div class="timeline-company">SAMPRO, CTCOM - Lyon
-        <span style="margin-left:0.5rem;">
-          <span class="project-tag">FTTH/FTTO</span>
-          <span class="project-tag">Switching/Routing</span>
-          <span class="project-tag">Installation/maintenance</span>
-        </span>
+      <div class="timeline-date">2021 – 2025 | Consultant Technique</div>
+      <div class="timeline-title">Coordination de Projets (Infrastructures) — SAMPRO, CTCOM</div>
+
+      <div class="timeline-company">
+        <span class="project-tag">FTTH/FTTO</span>
+        <span class="project-tag">Gestion de Chantier</span>
+        <span class="project-tag">Audit Technique</span>
+        <span class="project-tag">Qualité & Sécurité</span>
       </div>
-      <ul class="timeline-bullets">
-        <li>Installation et maintenance de réseaux fibre optique et systèmes informatiques</li>
-        <li>Formation, coordination et supervision de techniciens sur site</li>
-        <li>Gestion de chantiers et relation client/donneur d'ordre</li>
+
+      <ul class="timeline-bullets" style="margin-top:0.6rem;">
+        <li><strong>Pilotage opérationnel :</strong> Coordination de chantiers complexes de fibre optique, planification des interventions et encadrement direct d'équipes terrain.</li>
+        
+        <li><strong>Expertise & Résolution :</strong> Diagnostic technique avancé sur site, résolution proactive des problématiques imprévues et arbitrage technique pour garantir le respect des délais.</li>
+        
+        <li><strong>Assurance Qualité & Conformité :</strong> Garant du respect strict des normes de sécurité et des standards de qualité (qualité d'épissurage, tests de réflectométrie, normes de déploiement).</li>
       </ul>
+
+      <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#0369a1; font-weight:600;">
+          ✅ Pilotage d'infrastructures critiques
+        </div>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#15803d; font-weight:600;">
+          ✅ Gestion d'équipes terrain
+        </div>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#c2410c; font-weight:600;">
+          ✅ Expertise technique FTTH/FTTO
+        </div>
+      </div>
     </div>
 
     <!-- DOCTORAT -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2016 – 2020 | Doctorat</div>
-      <div class="timeline-title">Contrôle des fumées d'incendie dans les tunnels ventilés</div>
-      <div class="timeline-company">École Centrale de Lyon
-        <span style="margin-left:0.5rem;">
-          <span class="project-tag">FDS</span>
-          <span class="project-tag">Matlab</span>
-          <span class="project-tag">Maquette expérimentale</span>
-          <span class="project-tag">PIV</span>
-        </span>
+      <div class="timeline-title">Contrôle des Fumées d'Incendie en Tunnels Ventilés</div>
+
+      <div class="timeline-company">
+        <span class="project-tag">École Centrale de Lyon</span>
+        <span class="project-tag">Ingénierie des Tunnels</span>
+        <span class="project-tag">CFD (FDS)</span>
+        <span class="project-tag">Physique des Fluides</span>
+        <span class="project-tag">Sécurité Incendie</span>
+        <span class="project-tag">Ventilation (Longitudinale/Transversale)</span>
+        <span class="project-tag">Désenfumage Forcé</span>
+        <span class="project-tag">Barrières incendie</span>
+        <span class="project-tag">Trappes d'extraction</span>
       </div>
-      <ul class="timeline-bullets">
-        <li>Contrôle des fumées d'incendie en tunnel : Études expérimentales et simulations numériques pour évaluer et optimiser les systèmes de ventilation</li>
-        <li>Analyse des données expérimentales et numériques : Traitement et interprétation des mesures pour caractériser la dynamique des fumées et la stratiﬁcation thermique</li>
-        <li>Optimisation des trappes et configurations : Étude de l'impact de la position, forme et largeur des trappes sur l'efficacité du confinement des fumées</li>
-        <li>Solutions innovantes de sécurité incendie : Intégration de barrières solides (écrans de cantonnement) pour améliorer la maîtrise des fumées</li>
-        <li>Diffusion scientifique : 2 articles publiés dans Building and Environment et présentations dans 2 conférences internationales</li>
+
+      <div style="margin-top:0.6rem; margin-bottom:0.8rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <a href="https://theses.fr/2020LYSEC006" target="_blank"
+          style="display:inline-flex; align-items:center; gap:0.4rem; background:#1e293b; color:#fff; padding:0.35rem 0.9rem; border-radius:6px; font-size:0.82rem; font-weight:600; text-decoration:none;">
+          📂 Consulter la Thèse (theses.fr)
+        </a>
+      </div>
+
+      <p style="font-size:0.9rem; color:#475569; margin-bottom:0.9rem; line-height:1.6;">
+        Doctorat axé sur la <strong>mécanique des fluides appliquée à la sécurité incendie en milieu confiné</strong>. Travaux combinant <strong>simulation numérique haute fidélité (CFD)</strong> et expérimentation 
+        en maquette de tunnel à échelle réduite (1/25) pour optimiser la stratégie de désenfumage dans les milieux confinés. Les principes 
+        de ventilation forcée et de contrôle des débits développés lors de ces travaux forment 
+        le <strong>socle physique fondamental</strong> de mes solveurs aérauliques actuels pour 
+        les réseaux CVC.
+      </p>
+
+      <ul class="timeline-bullets" style="margin-top:0;">
+        <li><strong>Études CFD avancées :</strong> Modélisation haute fidélité (FDS) des phénomènes de transfert de masse et chaleur pour caractériser la dynamique des fumées et la stratification thermique.</li>
+        
+        <li><strong>Étude expérimentale du désenfumage :</strong> Analyse approfondie des écoulements en tunnels (ventilation longitudinale/transversale) via des essais paramétriques en particulier l'influence de la <strong>géométrie du tunnel</strong> et de la <strong>puissance de l'incendie</strong> sur les <strong>vitesses critiques</strong> et les débits de désenfumage requis.</li>
+        
+        <li><strong>Optimisation des systèmes :</strong> Analyse de l'efficacité des dispositifs de confinement (trappes, écrans de cantonnement) pour améliorer la maîtrise des fumées en cas d'incendie.</li>
+        
+        <li><strong>Reconnaissance scientifique :</strong> Auteur de <strong>2 articles </strong> publiés dans la revue <em>Building and Environment</em>, attestant de la rigueur et de la portée internationale des travaux.</li>
       </ul>
-      <div style="margin-top:0.8rem;"><a href="https://theses.fr/2020LYSEC006" target="_blank" class="project-link">→ <b>Voir la Thèse</b></a></div>
+
+      <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#0369a1; font-weight:600;">
+          ✅ Socle physique des réseaux HVAC actuels
+        </div>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#15803d; font-weight:600;">
+          ✅ Simulations CFD avancées
+        </div>
+        <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#7e22ce; font-weight:600;">
+          ✅ Réalisation de campagnes expérimentales d'incendie
+        </div>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#c2410c; font-weight:600;">
+          ✅ Publications : Building and Environment
+        </div>
+      </div>
     </div>
 
     <!-- STAGE MÉLANGEUR -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">Mars – Oct. 2016 | Stage Ingénieur R&D</div>
-      <div class="timeline-title">Etude de l'efficacité thermique d'un mélangeur chaotique (MLLM)</div>
-      <div class="timeline-company">École Centrale de Lyon
-        <span style="margin-left:0.5rem;">
-          <span class="project-tag">Matlab</span>
-          <span class="project-tag">OpenFOAM</span>
-          <span class="project-tag">SolidWorks</span>
-        </span>
-      </div>
-      <ul class="timeline-bullets" style="margin-top:0.6rem;">
-        <li>Objectif : Évaluation et optimisation de l'efficacité thermique des échangeurs en analysant les performances du MLLM (Multi-Level Laminating Mixer) pour améliorer le mélange en régime laminaire à bas nombres de Reynolds</li>
-        <li>Dispositif expérimental : Mélangeur chaotique intégré dans un canal d'eau froide, circulation d'eau chaude pour le transfert thermique, mesures et acquisition de températures automatisées via LabVIEW</li>
-        <li>Simulation numérique : Modélisation thermique et dynamique sous OpenFOAM, reconstruction 3D du mélangeur avec SolidWorks, exploration paramétrique pour validation et complément des expériences</li>
-        <li>Analyse & résultats : Confrontation des données expérimentales et références bibliographiques, montrant que le MLLM surpasse un échangeur classique en régime laminaire, avec applications pour les flux thermiques contrôlés en industries biologiques et pharmaceutiques</li>
-      </ul>
-    </div>
+      <div class="timeline-title">Étude Numérique et Expérimentale de l’Efficacité Thermique d’un Mélangeur Chaotique (MLLM)</div>
 
-    <!-- STAGE ENP -->
+      <div class="timeline-company">
+        <span class="project-tag">École Centrale de Lyon</span>
+        <span class="project-tag">Échangeur chaotique MLLM</span>
+        <span class="project-tag">Mélanges laminaires</span>
+        <span class="project-tag">Mesures expérimentales</span>
+        <span class="project-tag">CFD (OpenFOAM)</span>
+        <span class="project-tag">Transfert Thermique</span>
+      </div>
+
+      <p style="font-size:0.9rem; color:#475569; margin-bottom:0.9rem; line-height:1.6;">
+        Optimisation d'un mélangeur chaotique (MLLM) à 6 éléments de division/repliement fonctionnant à bas nombre de Reynolds. 
+        L'étude corrèle les performances thermiques aux capacités de mélange, en utilisant la solution de Graetz comme référentiel de comparaison en régime laminaire.
+      </p>
+
+      <ul class="timeline-bullets" style="margin-top:0;">
+        <li><strong>Dispositif Expérimental :</strong> Développement d'un banc d'essai instrumenté pour l'acquisition des profils de température à chaque élément, permettant de qualifier l'homogénéisation par transfert thermique.</li>
+
+        <li><strong>Simulation Numérique (CFD) :</strong> Modélisation sous <strong>OpenFOAM</strong> de l'advection chaotique au sein de la géométrie pour caractériser les mécanismes de mélange aux nœuds de rencontre.</li>
+
+        <li><strong>Analyse de Performance :</strong> Démonstration d'une intensification thermique dès le premier élément de mélange, confirmant l'efficacité du mécanisme de <em>split-and-recombine</em>.</li>
+
+        <li><strong>Validation :</strong> Confrontation aux modèles analytiques : le dépassement systématique de la solution de Graetz démontre la rupture des couches limites thermiques et l'excellence du mélange obtenu.</li>
+      </ul>
+
+      <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#0369a1; font-weight:600;">
+          ✅ Intensification thermique (Régime laminaire)
+        </div>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#15803d; font-weight:600;">
+          ✅ Advection chaotique (Split-and-recombine)
+        </div>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#c2410c; font-weight:600;">
+          ✅ Validation vs. Solution de Graetz
+        </div>
+      </div>
+    </div>    <!-- STAGE ENP -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">Fév. – Août 2015 | Stage Ingénieur</div>
-      <div class="timeline-title">Etude des performances aérauliques de ventilateurs centrifuges</div>
-      <div class="timeline-company">ENP Algérie
-        <span style="margin-left:0.5rem;">
-          <span class="project-tag">ANSYS Fluent</span>
-          <span class="project-tag">SolidWorks</span>
-        </span>
+      <div class="timeline-title">Performances Aérauliques de Ventilateurs Centrifuges</div>
+
+      <div class="timeline-company">
+        <span class="project-tag">Ecole Nationale Polytechnique d'Alger</span>
+        <span class="project-tag">Aéraulique</span>
+        <span class="project-tag">Instrumentation</span>
+        <span class="project-tag">CFD (ANSYS Fluent)</span>        
       </div>
-      <ul class="timeline-bullets">
-        <li>Objectif : Détermination des performances des ventilateurs à pales courbées vers l'arrière via expérimentation et simulations numériques</li>
-        <li>Conception et expérimentation : Réalisation complète d'un banc d'essai aéraulique avec capteurs de pression, planification et mise en place des campagnes de mesures (pression, débit, pertes de charge)</li>
-        <li>Simulation numérique : Modélisation du banc et du ventilateur avec SolidWorks, maillage et calculs CFD sous ANSYS Fluent (modèle turbulence k-ε), détermination des pertes de charge et performances aérodynamiques</li>
-        <li>Analyse & résultats : Confrontation des données expérimentales et numériques pour valider les modèles, optimiser les performances des ventilateurs et garantir le respect du plan de travail, tout en renforçant les compétences en gestion et suivi de projet</li>
+
+      <p style="font-size:0.9rem; color:#475569; margin-bottom:0.9rem; line-height:1.6;">
+        Projet d'ingénierie appliquée portant sur la caractérisation et l'optimisation de 
+        ventilateurs à pales courbées vers l'arrière. Ce travail a permis de coupler 
+        <strong>expérimentation physique</strong> et <strong>CFD haute performance</strong> 
+        pour valider les comportements aérodynamiques.
+      </p>
+
+      <ul class="timeline-bullets" style="margin-top:0;">
+        <li><strong>Ingénierie Expérimentale :</strong> Conception et mise en service d'un banc d'essai aéraulique instrumenté. Gestion complète de la campagne de mesures et du suivi des pertes de charge.</li>
+        
+        <li><strong>Simulation Numérique (CFD) :</strong> Utilisation du modèle de turbulence <em>k-ε</em> de <strong>ANSYS Fluent</strong> pour prédire le comportement aéraulique réel.</li>
+        
+        <li><strong>Analyse & Validation :</strong> Confrontation rigoureuse entre les résultats numériques et expérimentaux. Analyse des écarts pour affiner les modèles de prédiction de performance.</li>
+        
+        <li><strong>Gestion de projet :</strong> Responsable du respect du plan de travail et de la fiabilisation des données, renforçant les compétences en gestion de projet industriel.</li>
       </ul>
+
+      <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#0369a1; font-weight:600;">
+          ✅ Expertise en aéraulique industrielle
+        </div>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#15803d; font-weight:600;">
+          ✅ Simulation CFD (ANSYS Fluent)
+        </div>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:0.4rem 0.8rem; font-size:0.8rem; color:#c2410c; font-weight:600;">
+          ✅ Instrumentation & Banc d'essai
+        </div>
+      </div>
     </div>
 
   </div>
@@ -561,7 +794,6 @@
       <div class="formation-year">2016 – 2020</div>
       <div class="formation-degree">Doctorat – Mécanique des fluides et Énergétique</div>
       <div class="formation-school">École Centrale de Lyon, France</div>
-      <div class="formation-sub">Thèse : Contrôle des fumées d'incendie dans les tunnels ventilés</div>
     </div>
     <div class="formation-card">
       <div class="formation-year">2015 – 2016</div>
@@ -578,7 +810,7 @@
 
 <section id="contact">
   <div class="reveal">
-    <div class="section-label">Contact</div>
+    <div class="section-label">Contact & Liens</div>
   </div>
   <div class="contact-box reveal">
     <div class="contact-links">
