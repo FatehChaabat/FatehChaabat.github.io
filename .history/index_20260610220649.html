@@ -353,10 +353,10 @@
       </div>
 
       <!-- Bloc résumé accrocheur -->
-      <p style="font-size:0.9rem; color:#475569; margin-bottom:0.9rem; line-height:1.6; text-align:justify;">
+      <p style="font-size:0.9rem; color:#475569; margin-bottom:0.9rem; line-height:1.6;">
         Moteur de calcul aéraulique <strong>haute précision</strong> dédié au dimensionnement automatique
         des réseaux de ventilation CVC complexes. Conçu selon une approche <strong>physique rigoureuse</strong>
-        et déployé en production via une
+        (Colebrook-White, Idelchik Ch.5/Ch.7, Bernoulli généralisé) et déployé en production via une
         <strong>API REST industrielle</strong> — avec visualiseur interactif post-calcul, génération automatisée
         de rapports PDF, schémas topologiques PNG et exports JSON pour intégration BIM/CAO.
       </p>
@@ -379,9 +379,10 @@
         </li>
 
         <li><strong>Singularités dynamiques avancées (Idelchik Ch.5 & Ch.7) :</strong>
-          Calcul automatique des pertes des <strong>tés</strong> (division Idelchik 7-22,
-          confluence Idelchik 7-29) et des <strong>transitions convergent/divergent</strong>
-          (convergent Idelchik 5.6+5.23, divergent Borda-Carnot pondéré, seuil élargissement brusque α ≥ 40°). Sections réelles utilisées pour le ratio β
+          Calcul automatique des pertes des <strong>tés</strong> (division Idelchik 7-22 : ζ<sub>s</sub> = 1−(1−x)²−0.8x² ;
+          confluence Idelchik 7-29 : ζ<sub>s</sub> = 0.9(1−x)²) et des <strong>transitions convergent/divergent</strong>
+          (convergent Idelchik 5.6+5.23 ; divergent Borda-Carnot pondéré, seuil élargissement brusque α ≥ 40°).
+          Convention <code>slope_degrees</code> = angle total du cône. Sections réelles utilisées pour le ratio β
           (circulaire et rectangulaire). <strong>ζ négatifs</strong> isolés du solveur et appliqués en post-traitement.
           Activation indépendante tés/transitions via <code>Calcul_Tees_Dynamiques</code> et <code>Calcul_Transitions_Dynamiques</code>.
         </li>
@@ -399,9 +400,9 @@
           et géométrique automatique, catalogue d'accessoires intégré (60+ ζ sourcés Idelchik/ASHRAE/SMACNA).
           <strong>Visualiseur interactif post-calcul</strong> (Vis-Network) — 4 onglets de diagnostic, mode édition
           par conduit avec recalcul instantané, réinitialisation indépendante par champ (géométrie, rugosité, ζ),
-          reset conduit complet et reset réseau global.
+          reset conduit complet et reset global — valeurs initiales persistées côté serveur (<code>initial_state</code>).
           Génération automatisée de <strong>rapports PDF professionnels</strong>, <strong>schémas PNG</strong> annotés
-          et <strong>exports JSON normalisés</strong> pour BIM/CAO. Déploiement en production sur Render via l'interface Swagger UI.
+          et <strong>exports JSON normalisés</strong> pour BIM/CAO. Déployé en production sur Render.
         </li>
 
         <li><strong>Précision numérique & validation :</strong>
