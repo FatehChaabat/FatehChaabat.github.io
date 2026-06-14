@@ -4,6 +4,7 @@ Thumbs.db
 
 # Ignore editor files
 .vscode/
+.history/
 
 # Ignore node artifacts (if added later)
 node_modules/
